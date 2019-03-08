@@ -1,0 +1,688 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.4
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Aug 30, 2013 at 06:14 PM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.16
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `aptitude`
+--
+CREATE DATABASE IF NOT EXISTS `aptitude` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `aptitude`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ce`
+--
+
+CREATE TABLE IF NOT EXISTS `ce` (
+  `Q_no` int(50) NOT NULL AUTO_INCREMENT,
+  `Question` longtext NOT NULL,
+  `answer1` varchar(50) NOT NULL,
+  `answer2` varchar(50) NOT NULL,
+  `answer3` varchar(50) NOT NULL,
+  `answer4` varchar(50) NOT NULL,
+  `correct` varchar(50) NOT NULL,
+  PRIMARY KEY (`Q_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
+
+--
+-- Dumping data for table `ce`
+--
+
+INSERT INTO `ce` (`Q_no`, `Question`, `answer1`, `answer2`, `answer3`, `answer4`, `correct`) VALUES
+(1, 'Which command of MS-DOS is used to copy only files that have been modified on or after the date you specify?', 'XCOPY/D:date', 'COPY/D:date', 'COPY/M', 'XCOPY/V', 'XCOPY/D:date'),
+(2, 'Using the _____ swCEch causes FDISK to display the partCEion status of your hard disk wCEhout executing FDISK.', '/show', '/display', '/status', 'None of the above', '/status'),
+(3, 'What command is used to count the total number of lines, words, and characters contained in a file?', 'countw', 'wcount', 'wc', 'count p', 'wc'),
+(4, 'What will happen if in a C program you assign a value to an array element whose subscript exceeds the size of array?', 'The element will be set to 0.', 'The compiler would report an error.', 'program crash if some important data overwrCEes', 'The array size would appropriately grow.', 'program crash if some important data overwrCEes'),
+(5, 'What does the following declaration mean?\\r\\nint (*ptr)[10];', 'ptr is array of pointers to 10 integers', 'ptr is a pointer to an array of 10 integers', 'ptr is an array of 10 integers', 'ptr is an pointer to array', 'ptr is a pointer to an array of 10 integers'),
+(6, 'In C, if you pass an array as an argument to a function, what actually gets passed?', 'Value of elements in array', 'First element of the array', 'Base address of the array', 'Address of the last element of array', 'Base address of the array'),
+(7, 'What is the maximum number of IP addresses that can be assigned to hosts on a local subnet that uses the 255.255.255.224 subnet mask?', '14', '15', '16', '30', '30'),
+(8, 'Which configuration command must be in effect to allow the use of 8 subnets if the Class C subnet mask is 255.255.255.224?', 'Router(config)#ip classless', 'Router(config)#no ip classful', 'Router(config)#ip unnumbered', 'Router(config)#ip subnet-zero', 'Router(config)#ip subnet-zero'),
+(9, 'What is the subnetwork address for a host wCEh the IP address 200.10.5.68/28?', '200.10.5.56', '200.10.5.32', '200.10.5.64', '200.10.5.0', '200.10.5.64'),
+(10, 'Which of the following encapsulates PPP frames in Ethernet frames and uses common PPP features like authentication, encryption, and compression?', 'PPP', 'PPPoA', 'PPPoE', 'Token Ring', 'PPPoE'),
+(11, 'When a router is connected to a Frame Relay WAN link using a serial DTE interface, how is the clock rate determined?', 'Supplied by the CSU/DSU', 'By the far end router', 'By the clock rate command', 'By the Physical layer bCE stream timing', 'Supplied by the CSU/DSU'),
+(12, 'Which command is required for connectivCEy in a Frame Relay network if Inverse ARP is not operational?', 'frame-relay arp', 'frame-relay map', 'frame-relay interface-dci', 'frame-relay lmi-type', 'frame-relay map'),
+(13, 'What is the maximum distance running the lowest data rate for 802.11g?', 'About 100 feet', 'About 175 feet', 'About 300 feet', 'About 350 feet', 'About 300 feet'),
+(14, 'How many non-overlapping channels are available wCEh 802.11g?', '3', '12', '23', '40', '3'),
+(15, 'Which of the following is not a basic element wCEhin the microprocessor?', 'Microcontroller', 'ArCEhmetic logic unCE (ALU)', 'Register array', 'Control unCE', 'Microcontroller'),
+(16, 'Which method bypasses the CPU for certain types of data transfer?', 'Software interrupts', 'Interrupt-driven I/O', 'Polled I/O', 'Direct memory access (DMA)', 'Direct memory access (DMA)'),
+(17, 'Which of the following is not an enhancement to the Pentium that was unavailable in the 8086/8088?', '"Pipelined" archCEecture', 'Expansion of cache memory', 'Inclusion of an internal math coprocessor', 'Data/address line multiplexing', 'Data/address line multiplexing'),
+(18, 'DMA is particularly suCEed for data transfer between the ________.', 'disk drive and CPU', 'disk drive and RAM', 'disk drive and ROM', 'disk drive and I/O', 'disk drive and RAM'),
+(19, 'The first microprocessor had a(n)________.', '1-bCE data bus', '2-bCE data bus', '4-bCE data bus', '8-bCE data bus', '4-bCE data bus'),
+(20, 'Which microprocessor has multiplexed data and address lines?', '8086/8088', '80286', '80386', 'Pentium', '8086/8088'),
+(21, 'The output of an AND gate wCEh three inputs, A, B, and C, is HIGH when ________.', 'A = 1, B = 1, C = 0', 'A = 0, B = 0, C = 0', 'A = 1, B = 1, C = 1', 'A = 1, B = 0, C = 1', 'A = 1, B = 1, C = 1'),
+(22, 'If a 3-input NOR gate has eight input possibilCEies, how many of those possibilCEies will result in a HIGH output?', '1', '2', '7', '8', '1'),
+(23, 'If a signal passing through a gate is inhibCEed by sending a LOW into one of the inputs, and the output is HIGH, the gate is a(n):', 'AND', 'NAND', 'NOR', 'OR', 'NAND'),
+(24, 'Which of the following logical operations is represented by the + sign in Boolean algebra?', 'inversion', 'AND', 'OR', 'complementation', 'OR'),
+(25, 'How many pins does the 4049 IC have?', '14', '16', '18', '20', '16'),
+(26, 'The simultaneous processing of two or more programs by multiple processors is–', 'multiprogramming', 'multCEasking', 'time-sharing', ' multiprocessing', ' multiprocessing'),
+(27, ' A device that connects to a network wCEhout the use of cables is said to be–', 'distributed', ' free', 'centralized', 'open source', 'free'),
+(28, 'WCEh respect to a network interface card, the term 10/100 refers to', 'protocol speed', 'a fiber speed', 'megabCEs per seconds', 'minimum and maximum server speed', 'megabCEs per seconds'),
+(29, 'On the PC side, the printer port is a:', '25 pin female serial connector', '15 pin female parallel connector', '25 pin male serial connector', '25 pin female parallel connector', '25 pin female parallel connector'),
+(30, 'The terms "red book", "yellow book", and "orange book" refer to:', 'SCSI', 'ide', 'floppy drive technology', 'CD-ROM standards', 'CD-ROM standards'),
+(31, 'Where is metadata stored in MySQL?', 'In the MySQL database metadata', 'In the MySQL database metasql', 'In the MySQL database mysql', 'None of the above is correct.', 'In the MySQL database mysql'),
+(32, 'JDBC stands for:\r\n', 'Java Database ConnectivCEy', 'Java Database Components', 'Java Database Control', 'None of the above is correct', 'Java Database ConnectivCEy'),
+(33, 'A goal of data mining includes which of the following?\r\n', 'To explain some observed event or condCEion', 'To confirm that data exists', 'To analyze data for expected relationships', 'To create a new data warehouse', 'To explain some observed event or condCEion'),
+(34, 'How many bytes are occupied by near, far and huge pointers (DOS)?', 'near=2 far=4 huge=4', 'near=4 far=8 huge=8', 'near=2 far=4 huge=8', 'near=4 far=4 huge=8', 'near=2 far=4 huge=4'),
+(35, '#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int a[] = {10, 20, 30, 40, 50};\r\n    int j;\r\n    for(j=0; j<5; j++)\r\n    {\r\n        printf("%d\\n", a);\r\n        a++;\r\n    }\r\n    return 0;\r\n}', 'Error: Declaration syntax', 'Error: Expression syntax', 'Error: LValue required', 'Error: Rvalue required', 'Error: LValue required'),
+(36, 'What is the numerical range of a char?\r\n', '-128 to 127', '-(215) to (215) - 1', '0 to 32767', '0 to 65535', '0 to 65535'),
+(37, 'Which two statements are equivalent?\r\n1.16*4\r\n2.16>>2\r\n3.16/2^2\r\n4.16>>>2', '1 and 2', '2 and 4', '3 and 4', '1 and 3', '2 and 4'),
+(38, 'What is the frequency range of the IEEE 802.11b standard?', '2.4Gbps', '5Gbps', '2.4GHz', '5GHz', '2.4GHz'),
+(39, 'Which of the following are layers in the TCP/IP model?\r\n\r\n1.Application\r\n2.Session\r\n3.Transport\r\n4.Internet\r\n5.Data Link\r\n6.Physical\r\n', '1 and 2', '1, 3 and 4', '2, 3 and 5', '3, 4 and 5', '1, 3 and 4'),
+(40, 'Which statement(s) about IPv4 and IPv6 addresses are true?\r\n\r\n1.An IPv6 address is 32 bCEs long, represented in hexidecimal.\r\n2.An IPv6 address is 128 bCEs long, represented in decimal.\r\n3.An IPv4 address is 32 bCEs long, represented in decimal.\r\n4.An IPv6 address is 128 bCEs long, represented in hexidecimal.', '1 and 3 only', '2 only', '3 and 4', '2 and 4', '3 and 4'),
+(41, 'Format flags may be combined using', 'the bCEwise OR operator (|)', 'the logical OR operator (||)', 'the bCEwise AND operator (&)', 'the logical AND operator (&&)', 'the bCEwise OR operator (|)'),
+(42, 'To execute a C++ program, you first need to translate the source code into object code. This process is called', 'coding', 'compiling', 'sourcing', 'translating', 'compiling'),
+(43, 'The ''break'' statement is used to exist from', 'a do loop', 'a for loop', 'a swCEch statement', 'All of the above', 'All of the above'),
+(44, 'Which of the following would compile wCEhout error?', 'int a = Math.abs(-5);', 'int b = Math.abs(5.0);', 'int c = Math.abs(5.5F);', 'int d = Math.abs(5L);', 'int a = Math.abs(-5);'),
+(45, 'Three-tier archCEecture includes which of the following?', 'Three server layers', 'A client layer and two server layers', 'Two client layers and one server layer', 'Three client layers', 'A client layer and two server layers'),
+(46, 'Which type of entCEy represents a logical generalization whose actual occurrence is represented by a second, associated entCEy?\r\n', 'Supertype entCEy', 'Subtype entCEy', 'Archetype entCEy', 'Instance entCEy', 'Archetype entCEy'),
+(47, 'The primary key is selected from the:', 'composCEe keys.', 'determinants.', 'candidate keys.', 'foreign keys.', 'candidate keys.'),
+(48, 'To print out a and b given below, which of the following printf() statement will you use?\r\n\r\n#include<stdio.h>\r\n\r\nfloat a=3.14;\r\ndouble b=3.14;', 'printf("%f %lf", a, b);', 'printf("%Lf %f", a, b);', 'printf("%Lf %Lf", a, b);', 'printf("%f %Lf", a, b);', 'printf("%f %lf", a, b);'),
+(49, 'Which of the following should be used to implement a ''Like a'' or a ''Kind of'' relationship between two entCEies?\r\n', 'Polymorphism', 'Containership', 'Encapsulation', 'InherCEance', 'InherCEance'),
+(50, 'If s1 and s2 are references to two strings, then which of the following is the correct way to compare the two references?', 's1 is s2', 's1 == s2', 's1.Equals(s2)', 'strcmp(s1, s2)', 's1.Equals(s2)');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `civil`
+--
+
+CREATE TABLE IF NOT EXISTS `civil` (
+  `Q_no` int(100) NOT NULL,
+  `Question` longtext NOT NULL,
+  `answer1` varchar(100) NOT NULL,
+  `answer2` varchar(100) NOT NULL,
+  `answer3` varchar(100) NOT NULL,
+  `answer4` varchar(100) NOT NULL,
+  `correct` varchar(100) NOT NULL,
+  PRIMARY KEY (`Q_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `civil`
+--
+
+INSERT INTO `civil` (`Q_no`, `Question`, `answer1`, `answer2`, `answer3`, `answer4`, `correct`) VALUES
+(1, 'In a mortar, the binding material is`', 'cement', 'sand', 'surkhi', 'cinder', 'cement'),
+(2, 'Wrought iron contains carbon upto', '0.15%', '1%', '1.5%', '2%', '0.15%'),
+(3, 'In case of Raymond pile', 'lengths vary from 6 m to 12 m', 'diameter of top of piles varies from 40 cm to 60 c', 'diameter of pile at bottom varies from 20 cm to 28', 'all the above.', 'all the above.'),
+(4, 'The foundations are placed below ground level, to increase', 'strength', 'workability', 'stability of structure', 'all the above', 'stability of structure'),
+(5, 'Stud(s) of a common wooden partition', 'are vertical wooden members', 'is the upper horizontal wooden member', 'is the lower horizontal wooden member', 'are the intermediate horizontal wooden members.', 'are vertical wooden members'),
+(6, 'Pick up the correct statement from the following :', 'inclined borings are made for taking samples under', 'inclined borings are occasionally used instead of ', 'the spacing of inclined borings is kept such that ', 'all the above.', 'all the above.'),
+(7, 'To ensure that supporting area of an offset footing of a boundary wall is fully compressive, the C.G. of load must act', 'at the centre of the base', 'within the middle third of the base', 'within the middle fifth of the base', 'neither (a), (b) nor (c).', 'within the middle third of the base'),
+(8, 'The 9 cm x 9 cm side of a brick as seen in the wall face, is generally known as', 'stretcher', 'face', 'front', 'header', 'header'),
+(9, 'The loose pockets in soil mass can be bridged safely by providing a raft foundation provided the soft area is smaller than', 'the column spacing', 'one-third the column spacing', 'half the column spacing', 'three-fourth the column spacing', 'one-third the column spacing'),
+(10, 'Hydrographic surveys deal with the mapping of', 'large water bodies', 'heavenly bodies', 'mountaineous region', 'canal system', 'large water bodies'),
+(11, 'An ideal vertical curve to join two gradients, is', 'circular', 'parabolic', 'elliptical', 'hyperbolic', 'parabolic'),
+(12, 'The intercept of a staff', 'is maximum if the staff is held truly normal to th', 'is minimum if the staff is held truly normal to th', 'decreases if the staff is tilted away from normal', 'increases if the staff is tilted towards normal', 'is minimum if the staff is held truly normal to th'),
+(13, 'The radius of curvature of the arc of the bubble tube is generally kept', '10 m', '25 m', '50 m', '100 m', '100 m'),
+(14, '	\r\nThe real image of an object formed by the objective, must lie', 'in the plane of cross hairs', 'at the centre of the telescope', 'at the optical centre of the eye-piece', 'anywhere inside the telescope', 'in the plane of cross hairs'),
+(15, 'In chain surveying tie lines are primarily provided', 'to check the accuracy of the survey', 'to take offsets for detail survey', 'to avoid long offsets from chain lines', 'to increase the number of chain lines', 'to avoid long offsets from chain lines'),
+(16, 'Pick up the correct statement from the following :', 'the tangent screw enables to give small movement u', 'standing on the tripod is the levelling head or tr', 'the levelling screws are used to tilt the instrume', 'all the above', 'all the above'),
+(17, 'One of the Lehmann''s rules of plane tabling, is', 'location of the instrument station is always dista', 'when looking in the direction of each of the given', 'when the instrument station is outside the circums', 'none of these', 'location of the instrument station is always dista'),
+(18, 'For quality control of Portland cement, the test essentially done is', 'setting time', 'soundness', 'tensile strength', 'all the above.', 'all the above.'),
+(19, '	\r\nFor given water content, workability decreases if the concrete aggregates contain an excess of', 'thin particles', 'flat particles', 'elongated particles', 'all the above.', 'all the above.'),
+(20, '	\r\nFor ensuring quality of concrete, use', 'single sized aggegates', 'two sized aggregate', 'graded aggregates', 'coarse aggregates.', 'graded aggregates'),
+(21, 'Pick up the correct statement from the following:', 'Gypsum in cement decreases the setting time', 'The first compound of cement which reacts with wat', 'Bulking of sand is less when its particles are fin', 'All the above.', 'Gypsum in cement decreases the setting time'),
+(22, 'The risk of segregation is more for', 'wetter mix', 'larger proportion of maximum size aggregate', 'coarser grading', 'all the above.', 'all the above.'),
+(23, 'After casting, an ordinary cement concrete on drying', 'expands', 'mix', 'shrinks', 'none of these.', 'shrinks'),
+(24, 'Hydration of cement is due to chemical action of water with', 'Tricalcium silicate and dicalcium silicate', 'Dicalcium silicate and tricalcium aluminate', 'Tricalcium aluminate and tricalcium alumino ferrit', 'All the above.', 'All the above.'),
+(25, 'The standard sand now a days used in India, is obtained from', 'Jaipur (Rajasthan)', 'Jullundur (Punjab)', 'Hyderabad (Andhra Pradesh)', 'Ennore (Madras)', 'Ennore (Madras)'),
+(26, 'Curing', 'reduces the shrinkage of concrete', 'preserves the properties of concrete', 'prevents the loss of water by evaporation', 'all of the above.', 'all of the above.'),
+(27, 'While compacting the concrete by a mechanical vibrator, the slump should not exceed', '2.5 cm', '5.0 cm', '7.5 cm', '10 cm', '5.0 cm'),
+(28, 'A pitot tube is used to measure', 'pressure', 'difference in pressure', 'velocity of flow', 'none of these.', 'velocity of flow'),
+(29, 'The maximum vacuum created at the summit of a syphon is', '2.7 m of water', '7.4 m of water', '5.5 m of water', 'none.', '7.4 m of water'),
+(30, 'The total pressure force on a plane area is equal to the area multiplied by the intensity of pressure at its centroid, if', 'area is horizontal', 'area is vertical', 'area is inclined', 'all the above.', 'all the above.'),
+(31, 'If the volume of a liquid weighing 3000 kg is 4 cubic metres, 0.75 is its', 'specific weight', 'specific mass', 'specific gravity', 'none of these.', 'specific gravity'),
+(32, 'A syphon is used', 'to connect water reservoirs at different levels in', 'to supply water to a town from higher level to low', 'to fill up a tank with water at higher level from ', 'none of these.', 'to connect water reservoirs at different levels in'),
+(33, 'Unit of kinematic viscosity is', 'm2/sec', 'Newton sec/m2', 'Newton sec/m3', 'Kg sec/m2.', 'm2/sec'),
+(34, '	\r\nThe ratio of maximum velocity to average velocity of viscous fluid through a circular pipe is', '0.50', '0.75', '1.25', '2.00', '2.00'),
+(35, 'The shear stress distribution in viscous fluid through a circular pipe is :', 'maximum at the centre', 'maximum at the inside of surface', 'same throughout the section', 'none of these.', 'same throughout the section'),
+(36, 'The side slope of Cipolletti weir is generally kept', '1 to 4', '1 to 3', '1 to 2', '1 : 5', '1 to 4'),
+(37, '	\r\nBorrow pits should preferably be located in', 'field on the left side of the canal', 'field on the right side of the canal', 'fields on both sides of the canal', 'central half width of the section of the canal.', 'central half width of the section of the canal.'),
+(38, 'Irrigation canals are generally aligned along', 'ridge line', 'contour line', 'valley line', 'straight line.', 'ridge line'),
+(39, 'The length of a meander is the distance along the river between the tangent point of one curve to the tangent point of', 'reverse curve', 'next curve of the same order', 'reverse curve plus the width of the river', 'none of these.', 'next curve of the same order'),
+(40, 'Pick up the incorrect statement from the following', 'Side walls of a venturi head flume are splayed out', 'Length of side walls should be such that the width', 'Once the width of the flume becomes 2/3rd of the w', 'None of these.', 'None of these.'),
+(41, 'The difference in level between the top of a bank and supply level in a canal, is called', 'berm', 'free board', 'height of bank', 'none of these.', 'free board'),
+(42, 'The weakest section of a diamond riveting, is the section which passes through', 'first row', 'second row', 'central raw', 'one rivet hole of end row.', 'first row'),
+(43, 'In a loaded beam, the point of con-traflexture occurs at a section where', 'bending moment is minimum', 'bending moment is zero or changes sign', 'bending moment is maximum', 'shearing force is maximum', 'bending moment is zero or changes sign'),
+(44, 'A three-hinged arch is said to be :', 'statically determinate structure', 'statically indeterminate structure', 'a bent beam', 'none of these.', 'statically determinate structure'),
+(45, 'The shape of the bending moment diagram over the length of a beam, having no external load, is always', 'linear', 'parabolic', 'cubical', 'circular.', 'linear'),
+(46, 'Which one of the following represents an activity', 'excavation for foundation', 'curing of concrete', 'setting of question paper', 'all the above.', 'all the above.'),
+(47, '	\r\nThe technique for establishing and maintaining priorities among the various jobs of a project, is known', 'Event flow scheduling technique', 'Critical ratio scheduling', 'Slotting technique for scheduling', 'Short interval scheduling.', 'Critical ratio scheduling'),
+(48, 'Frederick W. Taylor introduced a system of working known as', 'line organisation', 'line and staff organisation', 'functional organisation', 'effective organisation.', 'functional organisation'),
+(49, 'The threshold markings are', '4 m wide', '1 m clear space between adjacents', '45 m in length', 'all the above.', 'all the above.'),
+(50, 'For the taxiways, the following statement is true', 'The maximum longitudinal grade is 3%', 'The permissible rate of change of grade is 1%', 'The permissible transverse grade is 1.5%', 'All the above.', 'All the above.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `etrx`
+--
+
+CREATE TABLE IF NOT EXISTS `etrx` (
+  `Q_no` int(50) NOT NULL,
+  `Question` longtext NOT NULL,
+  `answer1` varchar(50) NOT NULL,
+  `answer2` varchar(50) NOT NULL,
+  `answer3` varchar(50) NOT NULL,
+  `answer4` varchar(50) NOT NULL,
+  `correct` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `etrx`
+--
+
+INSERT INTO `etrx` (`Q_no`, `Question`, `answer1`, `answer2`, `answer3`, `answer4`, `correct`) VALUES
+(1, 'What is the color code for a 220 omega.gif 5% resistor?', 'Red, Red, Brown, Gold', 'Orange, Orange, Black, Gold', 'Red, Red, Black, Gold', 'Red, Red, Brown, Silver', 'Red, Red, Brown, Gold'),
+(2, '	\nIf 60 J of energy are available for every 15 C of charge, what is the voltage?\n\n	', '4 V', '60 V ', '15 V', '0.25 V', '4 V'),
+(3, '	\r\nWhat is the applied voltage for a series RLC circuit when IT = 3 mA, VL = 30 V, VC = 18 V, and R = 1000 ohms?\r\n\r\n	', '3.00 V', '12.37 V', '34.98 V', '48.00 V', '12.37 V'),
+(4, '\r\nHow much current will flow in a 100 Hz series RLC circuit if VS = 20 V, RT = 66 ohms, and XT = 47 ohms?\r\n\r\n', '1.05 A', '303 mA', '247 mA', '107 mA', '247 mA'),
+(5, '\r\nWhat is the Q (Quality factor) of a series circuit that resonates at 6 kHz, has equal reactance of 4 kilo-ohms each, and a resistor value of 50 ohms?\r\n', '0.001', '50', '80', '4.0', '80'),
+(6, '\r\nWhen a full band of frequencies is allowed to pass through a filter circuit to the output, the resonant circuit is called a:\r\n\r\n', 'low-pass filter', 'high-pass filter', 'band-stop filter', 'bandpass filter', 'bandpass filter'),
+(7, '\r\nIf the voltage across a fixed value of resistance is increased five times, what does the current do?\r\n', 'It increases by a factor of five.', 'It decreases by a factor of five.', 'It stays the same.', 'Not enough information.', 'It increases by a factor of five.'),
+(8, '\r\nA battery''s capacity to deliver power is measured in:\r\n', 'kWh', 'Vh', 'Wh', 'Ah', 'Vh'),
+(9, '\r\nConvert the binary number 1011010 to hexadecimal.\r\n', '5B	', '5F', '5A', '5C', '5A'),
+(10, '\r\nThe content of a simple programmable logic device (PLD) consists of:\r\n', 'fuse-link arrays', 'thousands of basic logic gates', 'advanced sequential logic functions', 'thousands of basic logic gates and advanced sequen', 'thousands of basic logic gates and advanced sequen'),
+(11, '\r\nThe difference between a PLA and a PAL is:\r\n', 'the PLA has a programmable OR plane and a programm', 'the PAL has a programmable OR plane and a programm', 'the PAL has more possible product terms than the P', 'PALs and PLAs are the same thing.', 'the PLA has a programmable OR plane and a programm'),
+(12, '\r\nCurrent equals:\r\n\r\n', 'mca1_1002a1.gif', 'coulombs × time', 'mca1_1002c1.gif', 'voltage × time', 'mca1_1002a1.gif'),
+(13, '\r\nSelect the best description of read-only memory (ROM).	 ', 'nonvolatile, used to store information that change', 'nonvolatile, used to store information that does n', 'volatile, used to store information that changes d', 'volatile, used to store information that does not ', 'nonvolatile, used to store information that does n'),
+(14, '\r\nWhich of the following RAM timing parameters determine(s) its operating speed?\r\n', 'tacc', 'taa and tacs', 't1 and t3', 'trc and twc', 't1 and t3'),
+(15, 'Select the best description of the fusible-link PROM.\r\n\r\nA.	\r\nB.	\r\nC.	\r\nD.	', 'user programmable, one-time programmable.', 'manufacturer programmable, one-time programmable.', 'user programmable, reprogrammable.', 'manufacturer programmable, reprogrammable.', 'user programmable, one-time programmable.'),
+(16, '\r\nA nonvolatile type of memory that can be programmed and erased in sectors, rather than one byte at a time is:\r\n', 'flash memory', 'EPROM', 'EEPROM', 'MPROM', 'flash memory'),
+(17, '\nWhat is the principal advantage of using address multiplexing with DRAM memory?\n', 'reduced memory access time', 'reduced requirement for constant refreshing of the', 'reduced pin count and decrease in package size', 'no requirement for a chip-select input line, there', ''),
+(18, '\r\nWhich of the following best describes static memory devices?\r\n', 'memory devices that are magnetic in nature and do ', 'semiconductor memory devices in which stored data ', 'memory devices that are magnetic in nature and req', 'semiconductor memory devices in which stored data ', 'semiconductor memory devices in which stored data '),
+(19, '\r\nWhen referring to instruction words, a mnemonic is:\r\n', 'a short abbreviation for the operand address', 'a short abbreviation for the operation to be perfo', 'a short abbreviation for the data word stored at t', 'shorthand for machine language', 'a short abbreviation for the operation to be perfo'),
+(20, '\r\nWhich bus is bidirectional?\r\n\r\n', 'data bus', 'control bus', 'address bus', 'multiplexed bus', 'data bus'),
+(21, '\r\nA microprocessor unit, a memory unit, and an input/output unit form a:\r\n', 'CPU', 'compiler', 'microcomputer', 'ALU', 'microcomputer'),
+(22, '\r\nHow many buses are connected as part of the 8085 microprocessor?', '2', '3', '8', '5', '3'),
+(23, '\r\nWhich of the following is not a computer bus?\r\n', 'data bus', 'timer bus', 'control bus', 'address bus', 'timer bus'),
+(24, '\r\nThe technique of assigning a memory address to each I/O device in the SAM system is called:\r\n', 'wired I/O', 'I/O mapping', 'dedicated I/O', 'memory-mapped I/O', 'memory-mapped I/O'),
+(25, '\r\nHow many bits are used in the data bus?\r\n', '7', '8', '16', '12', '8'),
+(26, '\r\nWhich of the following is not a basic element within the microprocessor?\r\n', 'microcontroller', 'arithmetic-logic unit (ALU)', 'temporary register', 'accumulator', 'microcontroller'),
+(27, '\r\nWhat theorem replaces a complex network with an equivalent circuit containing a source voltage and a series resistance?\r\n', 'Multinetwork', 'Norton', 'Thevenin', 'Superposition', 'Thevenin'),
+(28, '\r\nWhen a Wheatstone bridge is in a balanced condition, the center voltmeter in the bridge will read:\r\n', 'twice the source voltage', 'the same as the source voltage', 'zero volts', 'half the source voltage', 'zero volts'),
+(29, '\r\nWith 21 V applied, if R1 = 5 ohms, R2 = 35 ohms, and R3 = 14 ohms, what is the current of R2 if R1 is series connected with parallel circuit R2 and R3?\r\n', '400 mA', '800 mA', '600 mA', '200 mA', '400 mA'),
+(30, '\r\nWhat is the total resistance of a circuit when R1 (7 k omega.gif) is in series with a parallel combination of R2 (20 k omega.gif), R3 (36 k omega.gif), and R4 (45 k omega.gif)?\r\n', '4 k omega', '17 k omega', '41 k omega', '108 k omega', '17 k omega'),
+(31, '\r\nWhen placed into a circuit, how are electronic components usually connected?\r\n', 'positive terminal to positive terminal', 'in parallel', 'as a combination of series and parallel', 'in series', 'as a combination of series and parallel'),
+(32, '	\r\nElectricity may be generated by a wire:\r\n\r\nA.	\r\nB.	\r\nC.	\r\nD.	', 'carrying current', 'wrapped as a coil', 'that has neutral doETRXs', 'passing through a flux field', 'passing through a flux field'),
+(33, '\r\nAs current travels within a conductor:\r\n', 'the magnetic field aids the current', 'a magnetic field is developed around it', 'the wire tries to point north', 'an electrostatic field opposes the current', 'a magnetic field is developed around it'),
+(34, '\r\nWhat is hysteresis?\r\n	', 'lag between voltage and current', 'lag between cause and effect', 'lead between voltage and current', 'lead between cause and effect', 'lag between cause and effect'),
+(35, '\r\nWhat is the permeability of transformer iron?', '50', '450', '1,500', '5,500', '5,500'),
+(36, '\r\nA magnetic field has:\r\n\r\n\r\n\r\n\r\n', 'polar fields', 'lines of force', 'magnetomotive force', 'lines of reluctance', 'lines of force'),
+(37, '\r\nWhat is the number of turns required in the secondary winding for a transformer when 120 volts is applied to a 2400-turn primary to produce 7.5 Vac at the secondary?\r\n', '75 turns', '900 turns', '1920 turns', '150 turns', '150 turns'),
+(38, '\r\nWhen the transformer secondary is not loaded:\r\n\r\n', 'no secondary voltage is present', 'secondary current increases', 'no secondary current flows ', 'secondary voltage increases', 'no secondary current flows'),
+(39, '\r\nWhich of the following metric prefixes could replace 10–9?\r\n\r\n', 'Micro', 'Kilo', 'Nano', 'Mega', 'Nano'),
+(40, '\r\nScientific notation is a method:', 'of expressing a very large number', 'of expressing a very small number', 'used to make calculations with large and small num', 'All of the above', 'All of the above'),
+(41, '\r\n7200 mV is the same as:\r\n', '7.2 muV', '7.2 V', '7.2 muV ', '7,200,000 V ', '7.2 V'),
+(42, '\r\nWhat is the effect of increasing the resistance in a series RC circuit?\r\n', 'The phase shift will decrease.', 'The current will increase.', 'There will be no effect at all.', 'The input voltage will increase.', 'The phase shift will decrease.'),
+(43, 'What is the phase angle for a parallel circuit consisting of a 500 kHz, 5 Vac source with a 47 pF capacitor, and a 4.7 komega.gif resistor in parallel?\r\n\r\n', '55.3°', '–55.3°', '34.8°', '–34.8°', '34.8°'),
+(44, '\r\nThe capacitor that produces an ac ground is called a(n)', 'coupling capacitor', 'dc open ', 'bypass capacitor', 'ac open', 'bypass capacitor'),
+(45, '\r\nOften a common-collector will be the last stage before the load; the ETRX function of this stage is to\r\n', 'provide voltage gain', 'buffer the voltage amplifiers from the low-resista', 'provide phase inversion', 'provide a high-frequency path to improve the frequ', 'buffer the voltage amplifiers from the low-resista'),
+(46, '\r\nJunction Field Effect Transistors (JFET) contain how many diodes?', '4', '3', '2', '1', '1'),
+(47, '\r\nWhen an input delta of 2 V produces a transconductance of 1.5 mS, what is the drain current delta?\r\n', '666 mA', '0.5 mA', '3 mA', '0.75 mA', '3 mA'),
+(48, '\r\nWhen not in use, MOSFET pins are kept at the same potential through the use of:\r\n', 'conductive foam', 'nonconductive foam', 'shipping foil', 'a wrist strap', 'conductive foam'),
+(49, '\r\nWhich of the following describes the operation of a positive edge-triggered D-type flip-flop?\r\n', 'If both inputs are HIGH, the output will toggle.', 'The output will follow the input on the leading ed', 'When both inputs are LOW, an invalid state exists.', 'The input is toggled into the flip-flop on the lea', 'The output will follow the input on the leading ed'),
+(50, '\r\nA basic S-R flip-flop can be constructed by cross-coupling which basic logic gates?\r\n', 'AND or OR gates', 'XOR or XNOR gates', 'NOR or NAND gates', 'AND or NOR gates', 'NOR or NAND gates');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `extc`
+--
+
+CREATE TABLE IF NOT EXISTS `extc` (
+  `Q_no` int(50) NOT NULL AUTO_INCREMENT,
+  `Question` longtext NOT NULL,
+  `answer1` varchar(50) NOT NULL,
+  `answer2` varchar(50) NOT NULL,
+  `answer3` varchar(50) NOT NULL,
+  `answer4` varchar(50) NOT NULL,
+  `correct` varchar(50) NOT NULL,
+  PRIMARY KEY (`Q_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
+
+--
+-- Dumping data for table `extc`
+--
+
+INSERT INTO `extc` (`Q_no`, `Question`, `answer1`, `answer2`, `answer3`, `answer4`, `correct`) VALUES
+(1, 'The generic array logic (GAL) device is ________.', 'one-time programmable', 'reprogrammable', 'a CMOS device', 'reprogrammable and a CMOS device', 'reprogrammable'),
+(2, 'The range of voltages between VL(max) and VH(min) are ________.', 'unknown', 'unnecessary', 'unacceptable', 'between 2 V and 5 V', 'unacceptable'),
+(3, 'A full subtracter circuit requires ________.', 'two inputs and two outputs', 'two inputs and three outputs', 'three inputs and one output', 'three inputs and two outputs', 'three inputs and two outputs'),
+(4, 'The output of an AND gate is LOW ________.', 'all the time', 'when any input is LOW', 'when any input is HIGH', 'when all inputs are HIGH', 'when any input is LOW'),
+(5, 'Which of the following is not an analog device?', 'Thermocouple', 'Current flow in a circuit', 'Light switch', 'Audio microphone', 'Light switch'),
+(6, 'In a certain digital waveform, the period is four times the pulse width. The duty cycle is ________.', '0%', '25%', '50%', '100%', '25%'),
+(7, 'In positive logic, ________.', 'a HIGH = 1, a LOW = 0', 'a LOW = 1, a HIGH = 0', 'only HIGHs are present', 'only LOWs are present', 'a HIGH = 1, a LOW = 0'),
+(8, 'Convert the fractional binary number 0000.1010 to decimal.', '0.625', '0.50', '0.55', '0.10', '0.625'),
+(9, 'A common instrument used in troubleshooting a digital circuit is a(n) ________.', 'logic probe', 'oscilloscope', 'pulser', 'all of the above', 'all of the above'),
+(10, 'A pulse has a period of 15 ms. Its frequency is ________.', '6.66 Hz', '66.66 Hz', '666.66 Hz', '15 Hz', '66.66 Hz'),
+(11, 'When transistors are used in digital circuits they usually operate in the:', 'active region', 'breakdown region', 'saturation and cutoff regions', 'linear region', 'saturation and cutoff regions'),
+(12, 'Three different Q points are shown on a dc load line. The upper Q point represents the:', 'minimum current gain', 'intermediate current gain', 'maximum current gain', 'cutoff point', 'maximum current gain'),
+(13, 'A current ratio of IC/IE is usually less than one and is called:', 'beta', 'theta', 'alpha', 'omega', 'alpha'),
+(14, 'Junction Field Effect Transistors (JFET) contain how many diodes?', '4', '3', '2', '1', '1'),
+(15, 'When an input delta of 2 V produces a transconductance of 1.5 mS, what is the drain current delta?', '666 mA', '3 mA', '0.75 mA', '0.5 mA', '3 mA'),
+(16, 'A "U" shaped, opposite-polarity material built near a JFET-channel center is called the:', 'gate', 'block', 'drain', 'heat sink', 'gate'),
+(17, 'A TRIAC:', 'can trigger only on positive gate voltages', 'can trigger only on negative gate voltages', 'cannot be triggered with gate voltages', 'can be triggered by either a positive or a negativ', 'can be triggered by either a positive or a negativ'),
+(18, 'What does a hall effect sensor sense?', 'temperature', 'moisture', 'magnetic fields', 'pressure', 'magnetic fields'),
+(19, 'What causes the piezoelectric effect?', 'heat or dissimilar metals', 'pressure on a crystal', 'water running on iron', 'a magnetic field', 'pressure on a crystal'),
+(20, 'A UJT has:', 'two base leads', 'one emitter lead', 'two emitter leads and one base lead', 'one emitter lead and two base leads', 'one emitter lead and two base leads'),
+(21, 'A transformer is plugged into a 120 V rms source and has a primary current of 300 mA rms. The secondary is providing 18 V across a 10 omega load. What is the efficiency of the transformer?', '88%', '90%', '92%', '95%', '90%'),
+(22, 'What is a varistor?', 'a voltage-dependent resistor', 'a voltage-dependent diode', 'a current-dependent resistor', 'a current-dependent diode', 'a voltage-dependent resistor'),
+(23, 'What circuit activity may shift a characteristic curve so that diode operating points are different?', 'higher power (heat)', 'higher resistance', 'lower voltage', 'lower current', 'higher power (heat)'),
+(24, 'The dc current through each diode in a bridge rectifier equals:', 'the load current', 'half the dc load current', 'twice the dc load current', 'one-fourth the dc load current', 'the load current'),
+(25, 'In a diode schematic, the anode is represented by a(n):', 'triangle', 'vertical line', 'zig-zag line', 'element indicator', 'triangle'),
+(26, 'Rectifier output polarity depends upon:', 'cycles of input', 'capacitor polarity', 'half or full wave', 'diode installation', 'diode installation'),
+(27, 'The internal RAM memory of the 8051 is:', '32 bytes', '64 bytes', '128 bytes', '256 bytes', '128 bytes'),
+(28, 'On the fifth clock pulse, a 4-bit Johnson sequence is Q0 = 0, Q1 = 1, Q2 = 1, and Q3 = 1. On the sixth clock pulse, the sequence is ________.', 'Q0 = 1, Q1 = 0, Q2 = 0, Q3 = 0', 'Q0 = 1, Q1 = 1, Q2 = 1, Q3 = 0', 'Q0 = 0, Q1 = 0, Q2 = 1, Q3 = 1', 'Q0 = 0, Q1 = 0, Q2 = 0, Q3 = 1', 'Q0 = 0, Q1 = 0, Q2 = 1, Q3 = 1'),
+(29, 'The bit sequence 0010 is serially entered (right-most bit first) into a 4-bit parallel out shift register that is initially clear. What are the Q outputs after two clock pulses?', '0000', '0010', '1000', '1111', '1000'),
+(30, 'What is a shift register that will accept a parallel input, or a bidirectional serial load and internal shift features, called?', 'tristate', 'end around', 'universal', 'conversion', 'universal'),
+(31, 'A 339 IC is an example of a fourteen-pin DIP that can be made to function as a ________.', 'comparator', '555 timer', 'D to A converter', 'ladder network', 'comparator'),
+(32, 'Which of the following is not a linear/digital IC?', 'Phase-locked loop', 'Voltage-controlled oscillator', 'Passive filter', 'Comparator', 'Passive filter'),
+(33, 'What is the minimum number of conversions per second of a clock rate of 1 MHz operating a 10-stage counter in an ADC?', '1000', '976', '769', '697', '976'),
+(34, 'What is (are) the level(s) of the input voltage to a ladder-network conversion?', '0', 'Vref', '0 V or Vref', 'None of the above', '0 V or Vref'),
+(35, 'At what phase shift is the magnitude of A at its maximum in the Nyquist plot?', '90º', '180º', '270º', '0º', '180º'),
+(36, 'What is the minimum frequency at which a crystal will oscillate?', 'seventh harmonic', 'third harmonic', 'fundamental', 'second harmonic', 'fundamental'),
+(37, ' An amplifier with a gain of –500 and a feedback of  = –0.1 has a gain change of 15% due to temperature. Calculate the change in gain of the feedback amplifier.', '0.2%', '0.3%', '0.4%', '0.5%', '0.3%'),
+(38, ' Determine the voltage gain with feedback for a voltage-series feedback having A = –100, R1 = 15 k, Ro = 20 k, and a feedback of  = –0.25.', '3.85', '–3.85', '–9.09', '9.09', '–3.85'),
+(39, 'The intermediate frequency in a standard AM receiver is', '455 Hz.', '455 kHz.', '4.55 MHz.', 'none of the above', '455 kHz.'),
+(40, 'An AM demodulator can be implemented with a linear multiplier followed by a ________ filter.', 'low-pass', 'high-pass', 'band-pass', 'band-stop', 'low-pass'),
+(41, 'For a four-quadrant linear multiplier, what is the output voltage, given input voltages of Vx = +2 V and Vy = –10 V?', '+2 V', '+1 V', '–2 V', '–1 V', '–2 V'),
+(42, 'The output spectrum of a ________ modulator includes upper-side and lower-side frequencies and the carrier frequency.', 'balanced', 'standard amplitude', 'none of the above', 'unbalanced', 'standard amplitude'),
+(43, 'A phase-locked loop (PLL) is a feedback circuit consisting of a', 'phase detector.', 'low-pass filter.', 'VCO.', 'all of the above', 'all of the above'),
+(44, 'If a 1 MHz carrier is amplitude modulated with a 5 kHz audio signal, the upper-side frequency is ________ kHz.', '1005', '1000', '995', 'none of the above', '1005'),
+(45, 'Which filter exhibits a linear phase characteristic?', 'Bessel', 'Butterworth', 'Chebyshev', 'all of the above', 'Bessel'),
+(46, 'The critical frequency is defined as the point at which the response drops ________ from the passband.', '–20 dB', '–3 dB', '–6 dB', '–40 dB', '–3 dB'),
+(47, 'Which of the following areas is (are) an application of infrared-emitting diodes?', 'Intrusion alarms', 'Shaft encoders', 'Paper-tape readers', 'All of the above', 'All of the above'),
+(48, 'Schottky diodes are very effective at frequencies approaching ________.', '20 GHz', '10 MHz', '100 MHz', '1 MHz', '20 GHz'),
+(49, 'The majority of power diodes are constructed using ________.', 'molybdenum', 'platinum', 'tungsten', 'silicon', 'silicon'),
+(50, 'What is the response time of LCDs?', 'Less than 100 ns', '50 ms', '100 ms to 300 ms', '400 ms', '100 ms to 300 ms');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `it`
+--
+
+CREATE TABLE IF NOT EXISTS `it` (
+  `Q_no` int(50) NOT NULL AUTO_INCREMENT,
+  `Question` longtext NOT NULL,
+  `answer1` varchar(50) NOT NULL,
+  `answer2` varchar(50) NOT NULL,
+  `answer3` varchar(50) NOT NULL,
+  `answer4` varchar(50) NOT NULL,
+  `correct` varchar(50) NOT NULL,
+  PRIMARY KEY (`Q_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
+
+--
+-- Dumping data for table `it`
+--
+
+INSERT INTO `it` (`Q_no`, `Question`, `answer1`, `answer2`, `answer3`, `answer4`, `correct`) VALUES
+(1, 'Which command of MS-DOS is used to copy only files that have been modified on or after the date you specify?', 'XCOPY/D:date', 'COPY/D:date', 'COPY/M', 'XCOPY/V', 'XCOPY/D:date'),
+(2, 'Using the _____ switch causes FDISK to display the partition status of your hard disk without executing FDISK.', '/show', '/display', '/status', 'None of the above', '/status'),
+(3, 'What command is used to count the total number of lines, words, and characters contained in a file?', 'countw', 'wcount', 'wc', 'count p', 'wc'),
+(4, 'What will happen if in a C program you assign a value to an array element whose subscript exceeds the size of array?', 'The element will be set to 0.', 'The compiler would report an error.', 'program crash if some important data overwrites', 'The array size would appropriately grow.', 'program crash if some important data overwrites'),
+(5, 'What does the following declaration mean?\\r\\nint (*ptr)[10];', 'ptr is array of pointers to 10 integers', 'ptr is a pointer to an array of 10 integers', 'ptr is an array of 10 integers', 'ptr is an pointer to array', 'ptr is a pointer to an array of 10 integers'),
+(6, 'In C, if you pass an array as an argument to a function, what actually gets passed?', 'Value of elements in array', 'First element of the array', 'Base address of the array', 'Address of the last element of array', 'Base address of the array'),
+(7, 'What is the maximum number of IP addresses that can be assigned to hosts on a local subnet that uses the 255.255.255.224 subnet mask?', '14', '15', '16', '30', '30'),
+(8, 'Which configuration command must be in effect to allow the use of 8 subnets if the Class C subnet mask is 255.255.255.224?', 'Router(config)#ip classless', 'Router(config)#no ip classful', 'Router(config)#ip unnumbered', 'Router(config)#ip subnet-zero', 'Router(config)#ip subnet-zero'),
+(9, 'What is the subnetwork address for a host with the IP address 200.10.5.68/28?', '200.10.5.56', '200.10.5.32', '200.10.5.64', '200.10.5.0', '200.10.5.64'),
+(10, 'Which of the following encapsulates PPP frames in Ethernet frames and uses common PPP features like authentication, encryption, and compression?', 'PPP', 'PPPoA', 'PPPoE', 'Token Ring', 'PPPoE'),
+(11, 'When a router is connected to a Frame Relay WAN link using a serial DTE interface, how is the clock rate determined?', 'Supplied by the CSU/DSU', 'By the far end router', 'By the clock rate command', 'By the Physical layer bit stream timing', 'Supplied by the CSU/DSU'),
+(12, 'Which command is required for connectivity in a Frame Relay network if Inverse ARP is not operational?', 'frame-relay arp', 'frame-relay map', 'frame-relay interface-dci', 'frame-relay lmi-type', 'frame-relay map'),
+(13, 'What is the maximum distance running the lowest data rate for 802.11g?', 'About 100 feet', 'About 175 feet', 'About 300 feet', 'About 350 feet', 'About 300 feet'),
+(14, 'How many non-overlapping channels are available with 802.11g?', '3', '12', '23', '40', '3'),
+(15, 'Which of the following is not a basic element within the microprocessor?', 'Microcontroller', 'Arithmetic logic unit (ALU)', 'Register array', 'Control unit', 'Microcontroller'),
+(16, 'Which method bypasses the CPU for certain types of data transfer?', 'Software interrupts', 'Interrupt-driven I/O', 'Polled I/O', 'Direct memory access (DMA)', 'Direct memory access (DMA)'),
+(17, 'Which of the following is not an enhancement to the Pentium that was unavailable in the 8086/8088?', '"Pipelined" architecture', 'Expansion of cache memory', 'Inclusion of an internal math coprocessor', 'Data/address line multiplexing', 'Data/address line multiplexing'),
+(18, 'DMA is particularly suited for data transfer between the ________.', 'disk drive and CPU', 'disk drive and RAM', 'disk drive and ROM', 'disk drive and I/O', 'disk drive and RAM'),
+(19, 'The first microprocessor had a(n)________.', '1-bit data bus', '2-bit data bus', '4-bit data bus', '8-bit data bus', '4-bit data bus'),
+(20, 'Which microprocessor has multiplexed data and address lines?', '8086/8088', '80286', '80386', 'Pentium', '8086/8088'),
+(21, 'The output of an AND gate with three inputs, A, B, and C, is HIGH when ________.', 'A = 1, B = 1, C = 0', 'A = 0, B = 0, C = 0', 'A = 1, B = 1, C = 1', 'A = 1, B = 0, C = 1', 'A = 1, B = 1, C = 1'),
+(22, 'If a 3-input NOR gate has eight input possibilities, how many of those possibilities will result in a HIGH output?', '1', '2', '7', '8', '1'),
+(23, 'If a signal passing through a gate is inhibited by sending a LOW into one of the inputs, and the output is HIGH, the gate is a(n):', 'AND', 'NAND', 'NOR', 'OR', 'NAND'),
+(24, 'Which of the following logical operations is represented by the + sign in Boolean algebra?', 'inversion', 'AND', 'OR', 'complementation', 'OR'),
+(25, 'How many pins does the 4049 IC have?', '14', '16', '18', '20', '16'),
+(26, 'The simultaneous processing of two or more programs by multiple processors is–', 'multiprogramming', 'multitasking', 'time-sharing', ' multiprocessing', ' multiprocessing'),
+(27, ' A device that connects to a network without the use of cables is said to be–', 'distributed', ' free', 'centralized', 'open source', 'free'),
+(28, 'With respect to a network interface card, the term 10/100 refers to', 'protocol speed', 'a fiber speed', 'megabits per seconds', 'minimum and maximum server speed', 'megabits per seconds'),
+(29, 'On the PC side, the printer port is a:', '25 pin female serial connector', '15 pin female parallel connector', '25 pin male serial connector', '25 pin female parallel connector', '25 pin female parallel connector'),
+(30, 'The terms "red book", "yellow book", and "orange book" refer to:', 'SCSI', 'ide', 'floppy drive technology', 'CD-ROM standards', 'CD-ROM standards'),
+(31, 'Where is metadata stored in MySQL?', 'In the MySQL database metadata', 'In the MySQL database metasql', 'In the MySQL database mysql', 'None of the above is correct.', 'In the MySQL database mysql'),
+(32, 'JDBC stands for:\r\n', 'Java Database Connectivity', 'Java Database Components', 'Java Database Control', 'None of the above is correct', 'Java Database Connectivity'),
+(33, 'A goal of data mining includes which of the following?\r\n', 'To explain some observed event or condition', 'To confirm that data exists', 'To analyze data for expected relationships', 'To create a new data warehouse', 'To explain some observed event or condition'),
+(34, 'How many bytes are occupied by near, far and huge pointers (DOS)?', 'near=2 far=4 huge=4', 'near=4 far=8 huge=8', 'near=2 far=4 huge=8', 'near=4 far=4 huge=8', 'near=2 far=4 huge=4'),
+(35, '#include<stdio.h>\r\n\r\nint main()\r\n{\r\n    int a[] = {10, 20, 30, 40, 50};\r\n    int j;\r\n    for(j=0; j<5; j++)\r\n    {\r\n        printf("%d\\n", a);\r\n        a++;\r\n    }\r\n    return 0;\r\n}', 'Error: Declaration syntax', 'Error: Expression syntax', 'Error: LValue required', 'Error: Rvalue required', 'Error: LValue required'),
+(36, 'What is the numerical range of a char?\r\n', '-128 to 127', '-(215) to (215) - 1', '0 to 32767', '0 to 65535', '0 to 65535'),
+(37, 'Which two statements are equivalent?\r\n1.16*4\r\n2.16>>2\r\n3.16/2^2\r\n4.16>>>2', '1 and 2', '2 and 4', '3 and 4', '1 and 3', '2 and 4'),
+(38, 'What is the frequency range of the IEEE 802.11b standard?', '2.4Gbps', '5Gbps', '2.4GHz', '5GHz', '2.4GHz'),
+(39, 'Which of the following are layers in the TCP/IP model?\r\n\r\n1.Application\r\n2.Session\r\n3.Transport\r\n4.Internet\r\n5.Data Link\r\n6.Physical\r\n', '1 and 2', '1, 3 and 4', '2, 3 and 5', '3, 4 and 5', '1, 3 and 4'),
+(40, 'Which statement(s) about IPv4 and IPv6 addresses are true?\r\n\r\n1.An IPv6 address is 32 bits long, represented in hexidecimal.\r\n2.An IPv6 address is 128 bits long, represented in decimal.\r\n3.An IPv4 address is 32 bits long, represented in decimal.\r\n4.An IPv6 address is 128 bits long, represented in hexidecimal.', '1 and 3 only', '2 only', '3 and 4', '2 and 4', '3 and 4'),
+(41, 'Format flags may be combined using', 'the bitwise OR operator (|)', 'the logical OR operator (||)', 'the bitwise AND operator (&)', 'the logical AND operator (&&)', 'the bitwise OR operator (|)'),
+(42, 'To execute a C++ program, you first need to translate the source code into object code. This process is called', 'coding', 'compiling', 'sourcing', 'translating', 'compiling'),
+(43, 'The ''break'' statement is used to exist from', 'a do loop', 'a for loop', 'a switch statement', 'All of the above', 'All of the above'),
+(44, 'Which of the following would compile without error?', 'int a = Math.abs(-5);', 'int b = Math.abs(5.0);', 'int c = Math.abs(5.5F);', 'int d = Math.abs(5L);', 'int a = Math.abs(-5);'),
+(45, 'Three-tier architecture includes which of the following?', 'Three server layers', 'A client layer and two server layers', 'Two client layers and one server layer', 'Three client layers', 'A client layer and two server layers'),
+(46, 'Which type of entity represents a logical generalization whose actual occurrence is represented by a second, associated entity?\r\n', 'Supertype entity', 'Subtype entity', 'Archetype entity', 'Instance entity', 'Archetype entity'),
+(47, 'The primary key is selected from the:', 'composite keys.', 'determinants.', 'candidate keys.', 'foreign keys.', 'candidate keys.'),
+(48, 'To print out a and b given below, which of the following printf() statement will you use?\r\n\r\n#include<stdio.h>\r\n\r\nfloat a=3.14;\r\ndouble b=3.14;', 'printf("%f %lf", a, b);', 'printf("%Lf %f", a, b);', 'printf("%Lf %Lf", a, b);', 'printf("%f %Lf", a, b);', 'printf("%f %lf", a, b);'),
+(49, 'Which of the following should be used to implement a ''Like a'' or a ''Kind of'' relationship between two entities?\r\n', 'Polymorphism', 'Containership', 'Encapsulation', 'Inheritance', 'Inheritance'),
+(50, 'If s1 and s2 are references to two strings, then which of the following is the correct way to compare the two references?', 's1 is s2', 's1 == s2', 's1.Equals(s2)', 'strcmp(s1, s2)', 's1.Equals(s2)');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `main`
+--
+
+CREATE TABLE IF NOT EXISTS `main` (
+  `Q_no` int(50) NOT NULL AUTO_INCREMENT,
+  `Question` longtext NOT NULL,
+  `answer1` varchar(50) NOT NULL,
+  `answer2` varchar(50) NOT NULL,
+  `answer3` varchar(50) NOT NULL,
+  `answer4` varchar(50) NOT NULL,
+  `correct` varchar(50) NOT NULL,
+  PRIMARY KEY (`Q_no`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=201 ;
+
+--
+-- Dumping data for table `main`
+--
+
+INSERT INTO `main` (`Q_no`, `Question`, `answer1`, `answer2`, `answer3`, `answer4`, `correct`) VALUES
+(1, 'What is 68 + 56 + 107?', '221', '231', '232', '225', '231'),
+(2, 'What is the value of 9 in 967423.0876?', 'hundreds of thousands', 'hundreds', 'thousands', 'tens', 'hundreds of thousands'),
+(3, '79 x 56', '4,424', '4,522', '4,363', '4,414', '4,424'),
+(4, '5.5 x 0.4', '2.1', '2.4', '2.2', '2.0', '2.2'),
+(5, 'What is a week''s pay at a salary of 24,960 per year?', '500', '520', '460', '480', '480'),
+(6, 'What is the next number in the sequence -8 , 2 , -4 , 4 , 0 , 6 , ?', '8', '4', '-4', '0', '4'),
+(7, '1/2 is equal to:', '12/6', '2/1', '5/10', '4/6', '5/10'),
+(8, '29/9 is equal to:', '29 x 9', '31/9', '29 / 9', ' 3', '29 / 9'),
+(9, 'How much would be a 1/5 deposit on a car costing 18,000?', '1,800', '2,400', '4,500', '3,600', '3,600'),
+(10, 'What is 1/2 + 1/4 + 1/3 ?', '1', '11/16', '11/12', '11/9', '11/12'),
+(11, 'What is a quarter of 680?', '220', '170 ', '140 ', '180', '170 '),
+(12, 'What fraction must be added to 2/7 + 2/5 to make 1?', '24/35 ', '4/12 ', '2/3 ', '11/35', '11/35'),
+(13, 'Which is the same proportion as 1/3 to 1/2 ?', '2 to 3 ', '4 to 5 ', '1 to 3 ', '3 to 4', '2 to 3 '),
+(14, ' A train travels 360 miles at the rate of 40 miles per hour. Another\r\ntrain travels at 16 miles an hour. What is the distance in miles it\r\nwill travel in the same time?\r\n', '160', '144', '140', '112', '144'),
+(15, '9/10 as a decimal is?', '0.09 ', '9', '0.9', '0.009', '0.9'),
+(16, '3.14 + 4.06 + 7.9', '15.1', '15.01', '14.1', '14.9', '15.1'),
+(17, '1.06 / 0.4', '2.56', '0.265 ', '2.65 ', '0.0265', '2.65'),
+(18, 'What is 0.6 of 500?', '375 ', '340 ', '200 ', '300', '300'),
+(19, 'A ratio of 1 1/2 to 3 1/2 is the same as?', '2 : 3 ', '5 : 12 ', ' 8 : 15 ', '14 : 6', '14 : 6'),
+(20, 'What is the average of 3.91 , 4.78 , 5.73 and 2.18?', '4.15 ', '4.75', '4.25', '3.95', '4.15'),
+(21, ' How long will it take to cover 210 km (kilometres) at an average\r\nspeed of 120 km/hour?\r\n', '2 hours ', '1 hr 45 min ', '1 1/2 hours ', '1 hr 40 min', '1 hr 45 min '),
+(22, ' How much will be a tax of 17.5% added to an item costing 80?', '14.50 ', '17.50 ', '460', '14.00', '14.00'),
+(23, 'The price of petrol rises from .80 to .90 per litre. What is this as a\r\npercentage?\r\n', '11%', '12.5%', '11.25%', '10%', '12.5%'),
+(24, 'Agency Y employs 13,800 people . Of these, 42% are male, and 50% of the males are age 30 or younger. How many males are there in Agency Y who are older than 30?\r\n', '5796	', '2898', '3471', '2910', '2898'),
+(25, ' A machine can collate 126 books, each with 400 page, in 14 days. If it continues to collate at this same rate, how many 400 page books could it collate in 30 days?\r\n', '256', '290', '248', '270', '270'),
+(26, 'A cabinet maker has a round piece of wood 1/2" in diameter and 3/4 yards long. She\r\nneeds half the length for the back of a chair and the remaining piece for 3/4" pegs. How many pegs will she have?\r\n', '18 ', '9', '10', '8/9', '18'),
+(27, 'Robin can wallpaper a room in four hours. Susan can wallpaper the same room in seven hours. How long will it take them to wallpaper the room if they work together?', '4.5 hours ', '3.5 hours ', '5.5 hours', '2.5 hours', '2.5 hours'),
+(28, 'Mary and Alice jog 3 miles each evening . If they run at a constant rate and it takes Mary 40 minutes while Alice finishes in half an hour, how much distance does Mary have left when Alice finishes?', '1 miles', '3/4 miles ', '2/3 miles', '1 .33 miles', '3/4 miles '),
+(29, 'If one of every eight junior year students at a high school takes Latin, approximately what percent of a junior year class of 650 took Latin?', '6', '14', '81', '13', '13'),
+(30, 'A pharmacist combines ingredients x, y and z in a ratio of 1 :2:7 to produce cough\r\nmedicine. How many ounces of the second ingredient, ingredient y, is needed to make a 12 ounce bottle of the medicine?\r\n', '2.4 	', '8.4 ', '1 .2', '3 .6', '2.4'),
+(31, 'Agency Y served 187,565 people in 1981 . If the agency served 210,515 people in 1982,this reflected an increase of', '19 .10% ', '15 .6% ', '12.2%', '10.9%', '12.2%'),
+(32, 'The number of people attending a weekly training program in the month of January\r\naveraged 116 people . If there were 105 people attending the first week, 106 the second, and 125 the third, how many people attended the fourth week?\r\n', '118', '128', '130', '124', '128'),
+(33, 'It takes 16 typists 11 days to complete a project. How long would it take 10 typists, if they worked at the same rate to complete the same project?\r\n', '17.6 days ', '6.8 days ', '6.9 days', '18.4 days', '17.6 days '),
+(34, 'If the sum of two numbers is 280, and their ratio is 7:3 . then the smaller number is', '28', '84', '56', '196', '84'),
+(35, 'The population of Metropolis county in 1982 is 130% of its population in 1972- The\r\npopulation in 1972 was 145,000. What was the population in 1982?\r\n', '196,425 ', '174,612 ', '111,539', '188,500', '188,500'),
+(36, 'A car travels 50 miles an hour, and a plane travels 10 miles a minute. How far will the car travel when the plane travels 500 miles?', '50.4 miles ', '37.5 miles ', '41 .6 miles', '39.7 miles', '41 .6 miles'),
+(37, 'In a university with 2000 students the student-faculty ratio is 16 :1 . If 18% of the faculty have completed some of their own study at the university, approximately how many have not?', '119', '127', '23', '103', '103'),
+(38, 'From 6 p.m. until midnight, the temperature dropped at a constant rate . From midnight until 1 a.m., it dropped 8 degree. If at 6 p.m., the temperature was 54 degree and by 1 a.m., it was 37 degree, what was the temperature at 10 p.m.?', '46 degree	', '48 degree ', '45 degree', '49 degree', '48 degree '),
+(39, 'One eighth of a half gallon carton of ice cream has been eaten. The remainder is divided among three people . Approximately what percentage of a gallon does each person get?\r\n', '14.6% 	', '11 .3% ', '29.2%', '18.1%', '14.6% '),
+(40, 'On a promotional exam a woman scored 143 on a scale of 0-160. Her score converted to a scale of 0-100 is approximately :', '89', '70', '91', '84', '89'),
+(41, 'If Janet can build 22 tables in 14 days, and Anne can build 22 tables in 16 days,\r\napproximately how long will it take them to build 22 tables together?\r\n', '9.5 days ', '7.5 days ', '15 days', '8 days', '7.5 days '),
+(42, 'How many square tiles, each 12 inches on a side, will Ozzie need to cover a floor that is 11 feet wide and 18 feet long?', '99', '150', '163', '198', '198'),
+(43, 'A tax analyst earns four times as much in April as in each of the other months. What part of her entire year''s earnings does she earn in April?', '4/11 	', '1/3 ', '4/15', '4/13', '4/15'),
+(44, 'A train travels 70 miles when a bus travels 50 miles. How many miles will the train travel when the bus travels 60 miles?\r\n', '40', '78', '90', '84', '84'),
+(45, 'How many square tiles, each 300 nun on a side, will Jane need to cover a hall floor that is 120 cm wide and 3 .6 m long?', '480', '520', '490', '48', '48'),
+(46, 'A car travels 80 km/hr and a plane travels 16 000 m/min. How far will the car travel when the plane travels 800 km?\r\n', '80.6 km ', '66.7 km', '60.0 km ', '63 .5 km', '66.7 km'),
+(47, 'A pharmacist combines ingredients x, y, and z in a ratio of 2:3 :5 to produce cough medicine How many milliliters of the second ingredient, ingredient y, is needed to make a one liter bottle of the medicine?\r\n', '0.3 ', '150', '300', '500', '300'),
+(48, 'A cabinet maker has a dowel of wood 13 mm in diameter and 0.800 m long. She needs length for the back of the chair and the remaining piece for 37 mm pegs. Pegs\r\ngreater than 13 turn in diameter or shorter than 37 mm will not work. How many good pegs can she make?\r\n', '108', '11', '10', '109', '10'),
+(49, '2 8 18 32 50 ?', '60', '64', '72', '70', '72'),
+(50, '2304 576 144 36 9 ?', '3', '9', '2 1/4 ', '4', '2 1/4 '),
+(51, '1 3 6 10 15 ?', '20', '21', '25', '30', '21'),
+(52, '0 3 7 12 18 ?', '24', '29', '25', '34', '25'),
+(53, '16:3 24:5 44:10 36:3', '5:12 ', '11:4 ', '14:2', '12:1 ', '12:1 '),
+(54, '100:11 8:88 27:3 128:16', '8:1 ', '10:1 ', '22:1 	', '32:2 ', '8:1 '),
+(55, '51:6 126:18 38:3 28:4', '14.1 ', '24:8 ', '15:3 	', '17:2 ', '17:2 '),
+(56, '512:128 444:333 99:297 153:68', '12:20 	', '63:21 ', '8:13 	', '17:11 ', '63:21'),
+(57, 'The ratio between the three angles of a quadrilateral is 13 : 9 : 5 respectively. The value of the fourth angle of the quadrilateral is 36 degree. What is the difference between the largest and the second smallest angles of the quadrilateral?', '104 degree', '108 degree', '72 degree', '96 degree', '96 degree'),
+(58, 'Kamya purchased an item of Rs. 46,000 and sold it at loss of 12 per cent. With that amount she purchased another item and sold it at a gain of 12 per cent. What was her overall gain/loss? ', 'Loss of Rs. 662.40 ', 'Profit of Rs. 662.40 ', 'Loss of Rs. 642.80 ', 'Profit Rs. 642.80 	', 'Loss of Rs. 662.40 '),
+(59, 'The sum of six consecutive even numbers of set-A is 402. What is the sum of another set-B of four consecutive numbers whose lowest number is 15 less than double the lowest number of set- A?', '444', '442', '440', '446', '442'),
+(60, '280 metre long train moving with an average speed of 108 km/hr crosses a platform in 12 seconds. A man crosses the same platform in 10 seconds. What is the speed of the man in meter / second? ', '5 m/s ', '8 m/s ', '12 m/s', 'Cannot be determined', '8 m/s '),
+(61, 'Statement: There is big boom in drug business and a number of jhuggi-jhopari\r\ndwellers in Delhi can be seen pedalling with small pouches of smack and brown sugar.\r\n\r\nAssumptions:\r\nI.Drug addiction is increasing in the country, specially in the capital.\r\n\r\nII.All the big dons involved in the smuggling of drugs live in jhuggi-jhopari areas.\r\n\r\nIII.Most of the jhuggi-jhopari dwellers would do anything for money.\r\n', 'Only I is implicit', 'Only II is implicit', 'Only III is implicit', 'Only I and III are implicit', 'Only I and III are implicit'),
+(62, 'Statement: "Join X-tuition classes for sure success. Excellent teaching by excellent teachers is our strength." - An advertisement.\r\n\r\nAssumptions:\r\nI.	Sure success is desirable.\r\nII.	Students expect sure success when they join any tuition class.\r\nIII.	Just having excellent teachers does not ensure success.\r\n', 'Only I and II are implicit', 'Only II and III are implicit', 'Only I and III are implicit', 'Only II is implicit', 'Only I and II are implicit'),
+(63, 'Statement: Bill Clinton is the second democrat to be re-elected as President of America, the other being the legendary Roosevelt.\r\n\r\nAssumptions:\r\nI.	Clinton has the same qualities that Roosevelt had.\r\nII.	The majority of people in America have faith in Clinton.\r\nIII.	The election campaign of Clinton''s rivals was not impressive.\r\n', 'Only I is implicit', 'Only II is implicit', 'Only III is implicit', 'Either I or III is implicit', 'Only II is implicit'),
+(64, 'Statement: The Central Government has directed the State Governments to reduce government expenditure in view of the serious resource crunch and it may not be able to sanction any additional grant to the states for the next six months.\r\n\r\nAssumptions:\r\nI.The State Governments are totally dependent on Central Government for its expenditures.\r\n\r\nII.The Central Government has reviewed the expenditure account of the State Government.\r\n\r\nIII.The State Governments will abide by the directive.\r\n', 'None is implicit', 'Only II and III are implicit', 'Only III is implicit', 'All are implicit', 'Only II and III are implicit'),
+(65, 'Statement: "To make the company commercially viable, there is an urgent need to prune the staff strength and borrow money from the financial institutions." - Opinion of a consultant.\r\n\r\nAssumptions:\r\nI.	The financial institutions lend money for such proposals.\r\nII.	The product of the company has a potential market.\r\nIII.	The employees of the company are inefficient.\r\n', 'None is implicit', 'All are implicit', 'Only I and II are implicit', 'Only II and III are implicit', 'Only I and II are implicit'),
+(66, 'Statements:\r\n\r\nI.There is increase in water level of all the water tanks supplying drinking water to the city during the last fortnight.\r\n\r\nII.Most of the trains were cancelled last week due to water-logging on the tracks.\r\n', 'Statement I is the cause and statement II is its e', 'Statement II is the cause and statement I is its e', 'Both the statements I and II are independent cause', 'Both the statements I and II are effects of some i', 'Both the statements I and II are effects of some i'),
+(67, 'Look at this series: 2, 6, 18, 54, ... What number should come next?', '108', '148', '162', '216', '162'),
+(68, 'The length of a rectangle is three-fifths of the side of a square. The radius of a circle is equal to side of the square. The circumference of the circle is 132 cm. What is the area of the rectangle if the breadth of the rectangle is 8 cm? ', '112.4 sq cm ', '104.2 sq cm ', '100.8 sq cm ', 'None of these', '100.8 sq cm '),
+(69, 'Five-ninths of a number is equal to twenty five percent of the second number. The second number is equal to one-fourth of the third number. The value of the third number is 2960. What is 30 per cent of the first number? ', '88.8', '99.9', '66.6', 'None of these ', '99.9'),
+(70, 'The ratio of the present age of Manoj to that of Wasim is 3 : 11. Wasim is 12 years younger than Rehana. Rehana''s age after 7 years will be 85 years. What is the present age of Manoj''s father, who is 25 years older than Manoj?', '43 years ', '67 years ', '45 years ', '69 years ', '43 years '),
+(71, 'Dinesh''s monthly income is four times Suresh''s monthly income. Suresh''s monthly income is twenty per cent more than Jyoti''s monthly income. Jyoti''s monthly income is Rs. 22,000. What is Dinesh''s monthly income? ', 'Rs. 1, 06, 500 ', 'Rs. 1, 05, 600', 'Rs. 1, 04, 500	', 'Rs. 1, 05, 400 ', 'Rs. 1, 05, 600'),
+(72, 'The smallest side of a right-angled triangle is 8 cm less than the side of a square of perimeter 56 cm, The second largest side of the right-angled triangle is 4 cm less than the length of the rectangle of area 96 sq cm and breadth 8 cm. What is the largest side of the right-angled triangle? ', '20 cm ', '12cm', '10 cm ', '15 cm ', '10 cm '),
+(73, 'The ratio of the adjacent angles of a parallelogram is 7 : 8. Also, the ratio of the angles of quadrilateral is 5 : 6 : 7 : 12. What is the sum of the smaller angle of the parallelogram and the second largest angle of the quadrilateral? ', '168', '228', '156', '224', '168'),
+(74, 'Raju runs 1250 metre on Monday and Friday. Another days he runs 1500 metre except for Sunday (He does not run on Sunday). How many kilometre will he run in 3 weeks (first day starting from Monday)? ', '12.5 km ', '20.5 km ', '8.5 km ', '25.5 km ', '25.5 km '),
+(75, 'The sum of nine consecutive odd numbers of Set A is 621. What is the sum of a different set of six consecutive even numbers whose lowest number is 15 more than the lowest number of Set A?', '498', '468', '478', 'None of these ', 'None of these '),
+(76, 'In the first 10 overs of a cricket game, the run rate was only 3.2. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?', '6.25\r\n', '6.5\r\n', '6.75', '7', '6.25'),
+(77, 'The average of 20 numbers is zero. Of them, at the most, how many may be greater than zero?', '0', '1', '10', '19', '19'),
+(78, 'From a group of 7 men and 6 women, five persons are to be selected to form a committee so that at least 3 men are there on the committee. In how many ways can it be done?', '564', '645', '735', '756', '756'),
+(79, 'In how many different ways can the letters of the word ''LEADING'' be arranged in such a way that the vowels always come together?', '360', '480', '720', 'None of these', '720'),
+(80, 'Out of 7 consonants and 4 vowels, how many words of 3 consonants and 2 vowels can be formed?', '210', '1050', '25200', '21400', '25200'),
+(81, '	\r\nFind the greatest number that will divide 43, 91 and 183 so as to leave the same remainder in each case.', '4', '7', '9', '13', '4'),
+(82, 'Six bells commence tolling together and toll at intervals of 2, 4, 6, 8 10 and 12 seconds respectively. In 30 minutes, how many times do they toll together ?', '4', '10', '15', '16', '16'),
+(83, 'Let N be the greatest number that will divide 1305, 4665 and 6905, leaving the same remainder in each case. Then sum of the digits in N is:', '4', '5', '6', '8', '4'),
+(84, 'Three number are in the ratio of 3 : 4 : 5 and their L.C.M. is 2400. Their H.C.F. is:', '40', '80', '120', '200', '40'),
+(85, '3 pumps, working 8 hours a day, can empty a tank in 2 days. How many hours a day must 4 pumps work to empty the tank in 1 day?', '9', '10', '11', '12', '12'),
+(86, 'Running at the same constant rate, 6 identical machines can produce a total of 270 bottles per minute. At this rate, how many bottles could 10 such machines produce in 4 minutes?', '648', '1800', '2700', '10800', '2700'),
+(87, '39 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?', '10', '13', '14', '15', '13'),
+(88, 'Tea worth Rs. 126 per kg and Rs. 135 per kg are mixed with a third variety in the ratio 1 : 1 : 2. If the mixture is worth Rs. 153 per kg, the price of the third variety per kg will be:', '169.50', '170', '175.50', '180', '175.50'),
+(89, 'In what ratio must a grocer mix two varieties of pulses costing Rs. 15 and Rs. 20 per kg respectively so as to get a mixture worth Rs. 16.50 kg?', '3:7', '5:7', '7:3', '7:5', '7:3'),
+(90, 'In what ratio must water be mixed with milk to gain 16% on selling the mixture at cost price?', '1:6', '6:1', '2:3', '4:3', '1:6'),
+(91, '	\r\nIn a 100 m race, A can give B 10 m and C 28 m. In the same race B can give C:', '18 m\r\n', '20 m', '27 m', '9 m', '20 m'),
+(92, 'The total of the ages of Amar, Akbar and Anthony is 80 years. What was the total of their ages three years ago ?', '71 years', '72 years', '74 years', '77 years', '71 years'),
+(93, 'Cisco''s Unified Wireless Solution provides a mesh solution. What devices do you absolutely need to purchase to run a Cisco solution?\r\n\r\n1  WCS\r\n2  Controller\r\n3  Access point\r\n4  Bridge', '1 and 2', '3 and 2', '1 and 4', '4 only', '3 and 2'),
+(94, 'What is the maximum distance running the lowest data rate for 802.11g?', 'About 100 feet', 'About 175 feet', 'About 300 feet', 'About 350 feet', 'About 300 feet'),
+(95, 'The output of an AND gate with three inputs, A, B, and C, is HIGH when ________.', 'A = 1, B = 1, C = 0', 'A = 0, B = 0, C = 0', 'A = 1, B = 1, C = 1', 'A = 1, B = 0, C = 1', 'A=1, B=1, C=1'),
+(96, 'If a 3-input NOR gate has eight input possibilities, how many of those possibilities will result in a HIGH output?', '1', '2', '7', '8', '1'),
+(97, 'If a signal passing through a gate is inhibited by sending a LOW into one of the inputs, and the output is HIGH, the gate is a(n):', 'AND', 'NAND', 'NOR', 'OR', 'NAND'),
+(98, 'Which of the following logical operations is represented by the + sign in Boolean algebra?', 'inversion', 'AND', 'OR', 'complementation', 'OR'),
+(99, 'When 1100010 is divided by 0101, what will be the decimal remainder?', '2', '3', '4', '6', '3'),
+(100, 'Convert the decimal number 151.75 to binary.', '10000111.11', '11010011.01', '00111100.00', '10010111.11', '10010111.11'),
+(101, 'The number of bits used to store a BCD digit is:', '8', '4', '1', '2', '4'),
+(102, 'What is the result when a decimal 5238 is converted to base 16?', '327.375', '12166', '1388', '1476', '1476'),
+(103, 'In each series, look for the degree and direction of change between the numbers. In other words, do the numbers increase or decrease, and by how much', '(1/3)	', '(1/8)', '(2/8)	', '(1/16)', '(1/8)'),
+(104, 'Look at this series: 7, 10, 8, 11, 9, 12, ... What number should come next?\n', '7', '10', '12', '13', '10'),
+(105, 'A coffee shop blends 2 kinds of coffee,putting in 2 parts of a 33p. a gm. grade to 1 part of a 24p. a gm.If the mixture is changed to 1 part of the \r\n\r\n33p. a gm. to 2 parts of the less expensive grade,how much will the shop save in blending 100 gms.', 'Rs.8.00', 'Rs.3.00', 'Rs.1.00', 'Rs.0.90', 'Rs.3.00'),
+(106, 'Pipes P and Q can fill a tank in 12 minutes and 16 minutes respectively. Both are kept open for x minutes and then Q is closed and P fills the rest of the tank in 5 minutes. The value of  x is.', '6', '4', '2', '3', '4'),
+(107, 'The average of nine consecutive odd numbers is 53. What is the smallest number ?', '23', '37', '41', '45', '45'),
+(108, 'A certain type of mixture is prepared by mixing brand A at Rs.9 a kg. with brand B at Rs.4 a kg. If the mixture is worth Rs.7 a kg., how many kgs. of brand A are needed to make 40kgs. of the mixture?', 'Brand A needed is 20kgs.', 'Brand A needed is 24kgs.', 'Brand A needed is 28kgs.', 'Brand A needed is 32kgs.', 'Brand A needed is 24kgs.'),
+(109, 'Daal is now being sold at Rs. 20 a kg. During last month its rate was Rs. 16 per kg. By how much percent should a family reduce its consumption so as to keep the expenditure fixed?', '25 %', '20 %', '30 %', '40 %', '20 %.'),
+(110, 'A canteen requires 45 kg rice for 3 days. How much kg of rice will it require for the months of June , July and August ?', '1380 kg', '1365 kg', '1395 kg', '1410 kg', '1380 kg'),
+(111, 'Thirty men take 20 days to complete a job working 9 hours a day.How many hour a day should 40 men work to complete the job?', '8 hrs', '7 1/2 hrs', '7 hrs', '9 hrs', '7 1/2 hrs'),
+(112, 'One day, Ravi left home and cycled 10 km southwards, turned right and cycled 5 km and turned right and cycled 10 km and turned left and cycled 10 km. How\r\nmany kilometers will he have to cycle to reach his home straight ?', '10 km', '15 km', '20 km', '25 km', '15 km'),
+(113, 'With a 4/5 full tank a vehicle can travel 12 miles, how far can it travel with a 1/3 full tank', '3 miles', '5 miles', '7 miles', '2 miles', '5 miles'),
+(114, 'A boat travels 20 kms upstream in 6 hrs and 18 kms downstream in 4 hrs.Find the speed of the boat in still water and the speed of the water current?', '1/2 kmph', '7/12 kmph', '5 kmph', 'none of these', '7/12 kmph'),
+(115, 'A monkey starts climbing up a tree 20ft. tall. Each hour, it hops 3ft. and slips back 2ft. How much time would it take the monkey to reach the top?', '20 hours.', '19 hours.', '18 hours.', '17 hours.', '18 hours.'),
+(116, 'If x=y=2z and xyz=256 then what is the value of x?', '12', '8', '16', '6', '8'),
+(117, 'A man ate 100 bananas in five days, each day eating 6 more than the previous day. How many bananas did he eat on the first day?', '6', '8', '12', '14', '8'),
+(118, 'I drove 60 km at 30 kmph and then an additional 60 km at 50 kmph. Compute my average speed over my 120 km.', '40', '37 1/2', '25 1/2', '50', '37 1/2'),
+(119, 'The average ages of three persons is 27 years. Their ages are in the proportion of 1:3:5.What is the age in years of the youngest one among them.', '45 years', '27 years', '9 years', '3 years', '9 years'),
+(120, 'What is the greatest possible length that can be used to measure exactly the following Lengths 7m, 3m 85cm, 12m 95cm ?', '25 cm', '35 cm', '45 cm', '55 cm', '35 cm'),
+(121, 'Sum of three even consecutive numbers is 48, and then least number is.', '20', '18', '16', '14', '14'),
+(122, 'The minute hand of a clock overtakes the hour hand at intervals of 64 minutes of correct time. How much a day does the clock gain or lose?', '30 8/11 minutes.', '32 6/11 minutes.', '32 8/11 minutes.', '30 6/11 minutes.', '32 8/11 minutes.'),
+(123, 'One dog tells the other that there are two dogs in front of me. The other one also shouts that he too had two behind him. How many are they?', '6', '5', '4', '3', '3'),
+(124, 'Find the nth number in the series is -1, -3, -5, -7', 'n', '(n)*(n-1)', '(-1)*(2n-1)', 'infinite', '(-1)*(2n-1)'),
+(125, 'The square of a two digit number is divided by half the number. After 36 is added to the quotient, this sum is then divided by 2. The digits of the resulting number are the same as those in the original number, but they are in reverse order. The ten''s place of the original number is equal to twice the difference between its digits. What is the number?', '46', '48', '36', '38', '46'),
+(126, 'In the given figure, PA and PB are tangents to the circle at A and B respectively and the chord BC is parallel to tangent PA. If AC = 6 cm, and length of the tangent AP is 9 cm, then what is the length of the chord BC?\r\nAns. ', 'BC = 2 cm.', 'BC = 8 cm.', 'BC = 6 cm.', 'BC = 4 cm.', 'BC = 4 cm.'),
+(127, 'Three cards are drawn at random from an ordinary pack of cards. Find the probability that they will consist of a king, a queen and an ace.', '64/1210.', '32/2210.', '16/2210.', '64/2210.', '64/2210.'),
+(128, 'A number of cats got together and decided to kill between them 999919 mice. Every cat killed an equal number of mice. Each cat killed more mice than there were cats. How many cats do you think there were ?', '901.', '801.', '891.', '991.', '991.'),
+(129, 'If Log2 x - 5 Log x + 6 = 0, then what would the value / values of x be?', 'x = e5 or e3.', 'x = e2 or e5.', 'x = e2 or e3.', 'x = e3 or e5.', 'x = e2 or e3.'),
+(130, 'If r = 5 z then 15 z = 3 y, then r =', 'y', '2 y', '5 y', '10 y', 'y'),
+(131, 'A monkey starts climbing up a tree 20ft. tall. Each hour, it hops 3ft. and slips back 2ft. How much time would it take the monkey to reach the top?', '20 hours.', '19 hours.', '18 hours.', '17 hours.', '18 hours.'),
+(132, 'A certain type of mixture is prepared by mixing brand A at Rs.9 a kg. with brand B at Rs.4 a kg. If the mixture is worth Rs.7 a kg., how many kgs. of brand A are needed to make 40kgs. of the mixture?', 'Brand A needed is 20kgs.', 'Brand A needed is 24kgs.', 'Brand A needed is 28kgs.', 'Brand A needed is 32kgs.', 'Brand A needed is 24kgs.'),
+(133, 'A wizard named Nepo says "I am only three times my son''s age. My father is 40 years more than twice my age. Together the three of us are a mere 1240 years old." How old is Nepo?', '360 years old.', '240 years old.', '320 years old.', '160 years old.', '360 years old.'),
+(134, 'What is 35% of a number if 12 is 15% of a number?', '5', '12', '28', '33', '28'),
+(135, 'A man ate 100 bananas in five days, each day eating 6 more than the previous day. How many bananas did he eat on the first day?', '6', '8', '12', '14', '8'),
+(136, 'The minute hand of a clock overtakes the hour hand at intervals of 64 minutes of correct time. How much a day does the clock gain or lose?', '30 8/11 minutes.', '32 6/11 minutes.', '32 8/11 minutes.', '30 6/11 minutes.', '32 8/11 minutes.'),
+(137, 'Solve for x and y: 1/x - 1/y = 1/3, 1/x2 + 1/y2 = 5/9.', 'x = 5/2 or -5 and y = 3 or -3/2.', 'x = 3/2 or -3 and y = 5 or -5/2.', 'x = 3/2 or -3 and y = 2 or -3/2.', 'x = 3/2 or -3 and y = 3 or -3/2.', 'x = 3/2 or -3 and y = 3 or -3/2.'),
+(138, 'Daal is now being sold at Rs. 20 a kg. During last month its rate was Rs. 16 per kg. By how much percent should a family reduce its consumption so as to keep the expenditure fixed?', '25 %.', '20 %.', '30 %.', '40 %.', '20 %.'),
+(139, 'Can you find out what day of the week was January 12, 1979?', 'Friday.', 'Saturday.', 'Sunday.', 'Monday.', 'Friday.'),
+(140, 'A garrison of 3300 men has provisions for 32 days, when given at a rate of 850 grams per head. At the end of 7 days a reinforcement arrives and it was found that now the provisions will last 8 days less, when given at the rate of 825 grams per head. How, many more men can it feed?', '1500 men.', '1700 men.', '1900 men.', '2100 men.', '1700 men.'),
+(141, 'From 5 different green balls, four different blue balls and three different red balls, how many combinations of balls can be chosen taking at least one green and one blue ball?', '3720.', '3920.', '4320.', '4520.', '3720.'),
+(142, 'Three pipes, A, B, & C are attached to a tank. A & B can fill it in 20 & 30 minutes respectively while C can empty it in 15 minutes. If A, B & C are kept open successively for 1 minute each, how soon will the tank be filled?', '117 minutes.', '139 minutes.', '157 minutes.', '167 minutes.', '167 minutes.'),
+(143, 'A person walking 5/6 of his usual rate is 40 minutes late. What is his usual time?', '1 hours 20 minutes.', '2 hours 40 minutes.', '3 hours 20 minutes.', '5 hours 20 minutes.', '3 hours 20 minutes.'),
+(144, 'A train covers a distance in 50 min ,if it runs at a speed\r\nof 48kmph on an average.The speed at which the train must run\r\nto reduce the time of journey to 40 min will be.', '40kmph', '60kmph', '50kmph', '45kmph', '60kmph'),
+(145, 'The average ages of three persons is 27 years. Their ages are in the proportion of 1:3:5.What is the age in years of the youngest one among them.', '45 years', '27 years', '9 years', '3 years', '9 years'),
+(146, 'The average of 11 numbers is 50. If the average of first 6 numbers is 49 and that of last 6 is \r\n\r\n52.Find the 6th number .', '49', '52', '56', '62', '56'),
+(147, 'The smallest number which when divided by 20, 25, 35, 40 leaves the remainder 6 When divided \r\n\r\nby 14, 19, 23 and 34 respectively is the difference between divisor and The corresponding \r\n\r\nremainder is 6.', '1494', '1398', '1394', '1394', '1394'),
+(148, 'Sum of three even consecutive numbers is 48, and then least number is.', '20', '18', '16', '14', '14'),
+(149, 'Of the two-digit numbers (those from 11 to 95, both inclusive) how many have a Second digit \r\n\r\ngreater than the first digit?', '35', '36', '37', '38', '36'),
+(150, 'Vikas can cover a distance in 1hr 24min by covering 2/3 of\r\nthe distance at 4 kmph and the rest at 5kmph.the total\r\ndistance is ?', '4km', '6km', '8km', '12km', '6km'),
+(151, 'Five years ago the average age of a family of 3 members was 27 years. A child has Been born, \r\n\r\ndue to which the average age of the family is 25 years today. What is the Present age of the \r\n\r\nchild ?', '8 years', '12 years', '6 years', '4 years', '4 years'),
+(152, 'The greatest number of 4 digits which is divisible by each one of the number 12,18,21 and 28 \r\n\r\nis .', '9888', '9288', '9822', '9828', '9828'),
+(153, 'A boy was asked to find the value of 3/8 of a sum of money. Instead of multiplying The sum by \r\n\r\n3/8 he divided it by 3/8 and then his answer exceeded by Rs. 55. Find the Correct be x.\r\n 	 ', 'Rs.9', 'Rs.18', 'Rs.15', 'Rs.7', 'Rs.9'),
+(154, 'In a boat 25 persons were sitting. Their average weight increased one kilogram when One man \r\n\r\ngoes and a new man comes in. The weight of the new man is 70kgs. Find the Weight of the man \r\n\r\nwho is going.', '25 kgs', '35 kgs', '45 kgs', '55 kgs', '45 kgs'),
+(155, 'What is the greatest possible length that can be used to measure exactly the following Lengths \r\n\r\n7m, 3m 85cm, 12m 95cm ?', '25 cm', '35 cm', '45 cm', '55 cm', '35 cm'),
+(156, 'A coffee shop blends 2 kinds of coffee,putting in 2 parts of a 33p. a gm. grade to 1 part of a \r\n\r\n24p. a gm.If the mixture is changed to 1 part of the 33p. a gm. to 2 parts of the less \r\n\r\nexpensive grade,how much will the shop save in blending 100 gms.', 'Rs.8.00', 'Rs.3.00', 'Rs.1.00', 'Rs.0.90', 'Rs.3.00'),
+(157, 'There are 200 questions on a 3 hr examination. Among these questions are 50 Mathematics \r\n\r\nproblems. It is suggested that twice as much time be spent on each maths problem as for each \r\n\r\nother question. How many minutes should be spent on Mathematics problems', '36', '72', '60', '100', '72'),
+(158, 'If a and b are positive integers and (a-b)/3.5 = 4/7, then', 'b < a', 'b > a', 'b = a', 'b >= a', 'b < a'),
+(159, '2 hours after a freight train leaves Delhi a passenger train leaves the same station traveling \r\n\r\nin the same direction at an average speed of 16 km/hr. After traveling 4 hrs the passenger \r\n\r\ntrain overtakes the freight train. The average speed of the freight train Was ?', '30', '40', '58', '60', '40'),
+(160, 'If 9x-3y=12 and 3x-5y=7 then 6x-2y = ?', '-5', '4', '2', '8', '8'),
+(161, 'If a boat is moving in upstream with velocity of 14 km/hr and goes downstream with a velocity \r\n\r\nof 40 km/hr, then what is the speed of the stream ?', '13 km/hr', '26 km/hr', '34 km/hr', 'none of these', '13 km/hr'),
+(162, 'Two trains move in the same direction at 50 kmph and 32 kmph respectively. A man in the slower \r\n\r\ntrain observes the 15 seconds elapse before the faster train completely passes by him. What is \r\n\r\nthe length of faster train ?', '100m', '75m', '120m', '50m', '75m'),
+(163, 'I drove 60 km at 30 kmph and then an additional 60 km at 50 kmph. Compute my average speed \r\n\r\nover my 120 km.\r\n', '40', '37 1/2', '25 1/2', '50', '37 1/2'),
+(164, 'Divide 45 into four parts such that when 2 is added to the first part, 2 is subtracted from \r\n\r\nthe second part, 2 is multiplied by the third part and the fourth part is divided by two, all \r\n\r\nresult in the same number.', '8, 12, 5, 20', '6,10,15,11', '2,8,14,9', 'none of these', '2,8,14,9'),
+(165, 'What is the sum of the first 25 natural odd numbers?', '225', '125', '525', '625', '625'),
+(166, 'Look at this series: 2, 1, (1/2), (1/4), ... What number should come next?', '1/3', '1/8', '(2/8)', '1/16', '1/8'),
+(167, 'If Sam can do a job in 4 days that Lisa can do in 6 days and Tom can do in 2 days, how \r\n\r\nlong would the job take if Sam, Lisa, and Tom worked together to complete it?', '0.8 days', '1.09 days', '1.23 days', '1.65 days', '1.09 days'),
+(168, 'There are 8 ounces in a Â½ pound. How many ounces are in 7 3/4 lbs?', '12 ounces', '86 ounces', '119 ounces', '124 ounces', '124 ounces'),
+(169, 'What is the next number in the following pattern? 1, 1/2, 1/4, 1/8, ___', '1/10', '1/12', '1/14', '1/16', '1/16'),
+(170, 'If 6 is 24% of a number, what is 40% of the same number?', '8', '10', '15', '20', '10'),
+(171, 'If 8x + 5x + 2x + 4x = 114, the 5x + 3 =', '12', '25', '33', '47', '33'),
+(172, 'Find 8.23 x 109', '0.00000000823', '0.000000823', '8.23', '8230000000', '8230000000'),
+(173, 'Divide x5 by x2', 'x25', 'x10', 'x7', 'x3', 'x3'),
+(174, 'The product of two consecutive even number is 4224. What is smaller number?', '66', '64', '60', '58', '64'),
+(175, 'If the of 49a + 49b = 6272, what is the average of a and b?', '64', '74', '84', '62', '64'),
+(176, 'Which is the number that comes next in the sequence \r\n         0, 6, 24, 60, 120, 210, ?', '290', '312', '336', '380', '336'),
+(177, 'If in a certain language MYSTIFY is coded as NZTUJGZ,  how is NEMESIS 	coded in that language \r\n\r\n?', 'MDLHRDR', 'OFNFTJT', 'ODNHTDR', 'PGOKUGU', 'OFNFTJT'),
+(178, 'The average of nine consecutive odd numbers is 53. What is the smallest number ?', '23', '37', '41', '45', '45'),
+(179, 'A and B can do a work in 5 days. A alone can do the same work in 8 days. In how many days will \r\n\r\nB do the same work?\r\n', '11(1/3)', '12(2/5)', '13(1/3)', '15(4/5)', '13(1/3)'),
+(180, '5 year ago the average age of P,Q and R was 25 years and 7 years ago, the average age of Q and \r\n\r\nR was 20 years. What is P''s present age ?', '34 years', '36 years', '40 years', '24 years', '36 years'),
+(181, 'Pointing out of photograph, a man tells his friend, "She is the daughter of the only son of my \r\n\r\nfather''s wife." How is the girl in the photograph related the the man?', 'Daughter', 'Cousin', 'Mother', 'Sister', 'Daughter'),
+(182, 'A train crosses a pole in 15 seconds and a 100m. Long platform in 25 seconds. What is the \r\n\r\nlength of the train ?', '125m', '130m', '150m', '175m', '150m'),
+(183, 'The difference between compound interest and simple interest at 8% p.a. after 2 years is Rs. \r\n\r\n768. What is the sum?', '100200', '130000', '120000', '102000', '120000'),
+(184, 'The cost of 2 chairs and 3 tables is Rs. 6050 and that of 3 chairs and 2 tables is Rs. 5450. \r\n\r\nWhat is the price of 1 table?', 'Rs. 1450', 'Rs. 1560', 'Rs. 1840', 'Rs. 1620', 'Rs. 1450'),
+(185, 'Anoop and Suyesh invested in the ratio of 4 : 7 respectively. If both invested Rs. 49500 \r\n\r\ntogether, how much amount did Anoop invest?', 'Rs. 31500', 'Rs. 18000', 'Rs. 31000', 'Rs. 18500', 'Rs. 18000'),
+(186, 'What value will come in place of question mark (?) in the number series given below?\r\n17, 24, 34, 47, 63, ?', '80', '81', '82', '83', '82'),
+(187, 'Nikhil invests 26% of his annual income or Rs. 89856 in mutual fund . What is the monthly \r\n\r\nincome ?', 'Rs. 24800', 'Rs. 23200', 'Rs. 28800', 'Rs. 26800', 'Rs. 28800'),
+(188, 'The difference between 87% and 71% of a number is 448. What is 59% of that number ?', '1562', '1652', '1662', '1552', '1652'),
+(189, 'The area of circle is 154 cm2  . What is its circumference ?', '44 cm', '22 cm', '11 cm', '7 cm', '44 cm'),
+(190, 'The  average age of a woman and her daughter is 21 years. The ratio of their ages is 5 : 1. \r\n\r\nWhat was the ratio of their ages 4 years ago', '11 : 39', '42 : 11', '31 : 3', '11 : 45', '31 : 3'),
+(191, 'If an amount of Rs. 92070 is distributed amongst 135 persons. What is the amount that each \r\n\r\nperson gets ?', 'Rs. 696', 'Rs. 658', 'Rs. 666', 'Rs. 682', 'Rs. 682'),
+(192, 'A canteen requires 45 kg rice for 3 days. How much kg of rice will it require for the months \r\n\r\nof June , July and August ?', '1380 kg', '1365 kg', '1395 kg', '1410 kg', '1380 kg'),
+(193, 'Find the odd man out:\r\n	74, 24, 82, 61, 10, 4', '61', '24', '10', '82', '61'),
+(194, 'Find the odd man out:  15, 35, 45, 24 ,55, 65, 95', '15', '24', '55', '95', '24'),
+(195, 'Find the odd man out:  1, 3, 7, 11, 15, 18, 21', '3', '7', '18', '21', '18'),
+(196, 'Find the odd man out:\n	4, 8, 12, 16, 20, 24, 27, 32', '8', '27', '24', '32', '27'),
+(197, 'Find the odd man out:\n	31, 37, 41, 45, 55, 58, 61, 67', '31', '41', '67', '58', '58'),
+(198, 'The price of commodity X increases by 40 paise every year, while the price of commodity Y increases by 15 paise every year. If in 2001, the price of commodity X was Rs. 4.20 and that of Y was Rs. 6.30, in which year commodity X will cost 40 paise more than the commodity Y ?', '2010', '2011', '2012', '2013', '2011'),
+(199, 'There are two examinations rooms A and B. If 10 students are sent from A to B, then the number of students in each room is the same. If 20 candidates are sent from B to A, then the number of students in A is double the number of students in B. The number of students in room A is:', '20', '80', '100', '200', '100'),
+(200, 'If a - b = 3 and a2 + b2 = 29, find the value of ab.', '10', '12', '15', '18', '10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mech`
+--
+
+CREATE TABLE IF NOT EXISTS `mech` (
+  `Q_no` int(100) NOT NULL,
+  `Question` longtext NOT NULL,
+  `answer1` varchar(100) NOT NULL,
+  `answer2` varchar(100) NOT NULL,
+  `answer3` varchar(100) NOT NULL,
+  `answer4` varchar(100) NOT NULL,
+  `correct` varchar(100) NOT NULL,
+  PRIMARY KEY (`Q_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mech`
+--
+
+INSERT INTO `mech` (`Q_no`, `Question`, `answer1`, `answer2`, `answer3`, `answer4`, `correct`) VALUES
+(1, 'Work done is said to be zero, when', 'some force acts on a body, but displacement is zero', 'no force acts on a body but some displacement takes place', 'either (a) or (b)', 'none of the above', 'either (a) or (b)'),
+(2, 'The point, through which the whole weight of the body acts, irrespective of its position, is known as', 'moment of inertia', 'centre of gravity', 'centre of percussion', 'centre of mass', 'centre of gravity\r\n\r\n'),
+(3, 'The rate of change of momentum is directly proportional to the impressed force, and takes place in the same direction in which the force acts. This statement is known as', 'Newton''s first law of motion', 'Newton''s second law of motion', 'Newton''s third law of motion', 'none of these', 'Newton''s second law of motion'),
+(4, 'The mechanical advantage of a lifting machine is the ratio of', 'distance moved by effort to the distance moved by load', 'load lifted to the effort applied', 'output to the input', 'all of the above', 'load lifted to the effort applied'),
+(5, 'The friction experienced by a body, when in motion, is known as', 'rolling friction', 'dynamic friction', 'limiting friction', 'static friction', 'dynamic friction'),
+(6, 'Two balls of equal mass and of perfectly elastic material are lying on the floor. One of the ball with velocity v is made to struck the second ball. Both the balls after impact will move with a velocity', 'v', 'v/2', 'v/4', 'v/8', 'v/2'),
+(7, 'The bodies which rebound after impact are called', 'inelastic bodies', 'elastic bodies', 'neither elastic nor inelastic bodies', 'none of these', 'elastic bodies'),
+(8, 'Three forces acting on a rigid body are represented in magnitude, direction and line of action by the three sides of a triangle taken in order. The forces are equivalent to a couple whose moment is equal to', 'area of the triangle', 'twice the area of the triangle', 'half the area of the triangle', 'none of these', 'twice the area of the triangle'),
+(9, 'A body of mass m moving with a constant velocity v strikes another body of same mass m moving with same velocity but in opposite direction. The common velocity of both the bodies after collision is\r\n', 'v', '2v', '4v', '8v', '2v'),
+(10, 'The unit of power in S.I. units is', 'horsepower', 'joule', 'watt', 'kg-m', 'kg-m'),
+(11, 'The value of bulk modulus of a fluid is required to determine', 'Reynold''s number', 'Froude''s number', 'Mach number', 'Euler''s number', 'Mach number'),
+(12, 'In a depressed nappe', 'the pressure below the nappe is atmospheric', 'the pressure below the nappe is negative', 'the pressure above the nappe is atmospheric', 'the pressure above the nappe is negative', 'the pressure below the nappe is negative'),
+(13, 'In one dimensional flow, the flow', 'is steady and uniform', 'takes place in straight line', 'takes place in curve', 'takes place in one direction', 'takes place in straight line'),
+(14, 'Coefficient of contraction is the ratio of', 'actual velocity of jet at vena contracta to the theoretical velocity', 'loss of head in the orifice to the head of water available at the exit of the orifice', 'actual discharge through an orifice to the theoretical discharge', 'area of jet at vena contracta to the area of orifice', 'area of jet at vena contracta to the area of orifice'),
+(15, 'In a free nappe,', 'the pressure below the nappe is atmospheric', 'the pressure below the nappe is negative', 'the pressure above the nappe is atmospheric', 'the pressure above the nappe is negative', 'the pressure below the nappe is atmospheric'),
+(16, 'Coefficient of resistance is the ratio of', 'actual velocity of jet at vena contracta to the theoretical velocity', 'area of jet at vena contracta to the area of orifice', 'loss of head in the orifice to the head of water available at the exit of the orifice', 'actual discharge through an orifice to the dieoretical discharge', 'loss of head in the orifice to the head of water available at the exit of the orifice'),
+(17, 'In order to measure the flow with a venturimeter, it is installed in', 'horizontal line', 'inclined line with flow upwards', 'inclined line with flow downwards', 'any direction and in any location', 'any direction and in any location'),
+(18, 'Which of the following is an example of laminar flow?', 'Under ground flow', 'Flow past tiny bodies', 'Flow of oil in measuring instruments', 'all of these', 'all of these'),
+(19, 'The pressure less than atmospheric pressure is known as', 'suction pressure', 'vacuum pressure', 'negative gauge pressure', 'all of these', 'all of these'),
+(20, 'The total energy line lies over the hydraulic gradient line by an amount equal to the', 'pressure head', 'velocity head', 'pressure head + velocity head', 'pressure head - velocity head', 'velocity head'),
+(21, 'The coefficient of viscosity may be determined by', 'capillary tube method', 'orifice type viscometer', 'rotating cylinder method', 'all of these', 'all of these'),
+(22, 'The stability of a dam is checked for', 'tension at the base', 'overturning of the wall or dam', 'sliding of the wall or dam', 'all of these', 'all of these'),
+(23, 'A manometer is used to measure', 'low pressure', 'moderate pressure', 'high pressure', 'atomospheric pressure', 'high pressure'),
+(24, 'The centre of gravity of the volume of the liquid displaced is called', 'centre of pressure', 'centre of buoyancy', 'metacentre', 'none of these', 'centre of buoyancy'),
+(25, 'The coefficient of discharge for an external mouthpiece is', '0.375', '0.5', '0.707', '0.855', '0.855'),
+(26, 'Strain energy is the', 'energy stored in a body when strained within elastic limits', 'energy stored in a body when strained upto the breaking of a specimen', 'maximum strain energy which can be stored in a body', 'proof resilience per unit volume of a material', 'energy stored in a body when strained within elastic limits'),
+(27, 'The neutral axis of the cross-section a beam is that axis at which the bending stress is', 'zero', 'minimum', 'maximum', 'infinity', 'zero'),
+(28, 'The object of caulking in a riveted joint is to make the joint', 'free from corrosion', 'stronger in tension', 'free from stresses', 'leak-proof', 'leak-proof'),
+(29, 'A steel bar of 5 mm is heated from 15° C to 40° C and it is free to expand. The bar Will induce', 'no stress', 'shear stress', 'tensile stress', 'compressive stress', 'no stress'),
+(30, 'A body is subjected to a tensile stress of 1200 MPa on one plane and another tensile stress of 600 MPa on a plane at right angles to the former. It is also subjected to a shear stress of 400 MPa on the same planes. The maximum normal stress will be', '400 MPa', '500 MPa', '900 MPa', '1400 MPa', '1400 MPa'),
+(31, 'The stress induced in a body, when suddenly loaded, is __________ the stress induced when the same load is applied gradually.', 'equal to', 'one-half', 'twice', 'four times', 'twice'),
+(32, 'A masonry dam may fail due to', 'tension in the masonry of the dam and its base', 'overturning of the dam', 'crushing of masonry at the base of the dam', 'any one of the above', 'any one of the above'),
+(33, 'The maximum diameter of the hole that can be punched from a plate of maximum shear stress 1/4th of its maximum crushing stress of punch, is equal to (where t = Thickness of the plate)', 't', '2t', '4t', '8t', '4t'),
+(34, 'The deformation per unit length is called', 'tensile stress', 'compressive stress', 'shear stress', 'strain', 'strain'),
+(35, 'Strain resetters are used to', 'measure shear strain', 'measure linear strain', 'measure volumetric strain', 'relieve strain', 'measure linear strain'),
+(36, 'For high speed engines, the cam follower should move with', 'uniform velocity', 'simple harmonic motion', 'uniform acceleration and retardation', 'cycloidal motion', 'cycloidal motion'),
+(37, 'In a coupling rod of a locomotive, each of the four pairs is a __________ pair.', 'sliding', 'turning', 'rolling', 'screw', 'turning'),
+(38, 'The factor which affects the critical speed of a shaft is', 'diameter of disc', 'span of shaft', 'eccentricity', 'all of these', 'all of these'),
+(39, 'The pair is known as a higher pair, when the relative motion between the elements of a pair is', 'turning only', 'sliding only', 'rolling only', 'partly turning and partly sliding', 'partly turning and partly sliding'),
+(40, 'The Whitworth quick return motion mechanism is formed in a slider crank chain when the', 'coupler link is fixed', 'longest link is a fixed link', 'slider is a fixed link', 'smallest link is a fixed link', 'coupler link is fixed'),
+(41, 'In railway axle boxes, the bearing used is', 'deep groove ball bearing', 'double row self-aligning ball bearing', 'double row spherical roller bearing', 'cylindrical roller bearing', 'double row spherical roller bearing'),
+(42, 'When the two elements of a pair have a surface contact when relative motion takes place and the surface of one element slides over the surface of the other, the pair formed is known as a', 'lower pair', 'higher pair', 'self-closed pair', 'force-closed pair', 'lower pair'),
+(43, 'The aim of value engineering is to', 'find the depreciation value of a machine', 'determine the selling price of a product', 'minimise the cost without change in quality of the product', 'minimise the cost without change in quality of the product', 'minimise the cost without change in quality of the product'),
+(44, 'In time study, the rating factor is applied to determine', 'standard time of a job', 'merit rating of the worker', 'fixation of incentive rate', 'normal time of a worker', 'fixation of incentive rate'),
+(45, 'Gantt chart is used for', 'inventory control', 'material handling', 'production schedule', 'machine repair schedules', 'production schedule'),
+(46, 'The main object of scientific layout is', 'to produce better quality of product', 'to utilise maximum floor area', 'to minimise production delays', 'all of these', 'all of these'),
+(47, 'In value engineering, the term value refers to', 'manufacturing cost of the product', 'selling price of the product', 'total cost of the product', 'utility of the product', 'utility of the product'),
+(48, 'In inventory control theory, the economic order quantity is', 'average level of inventory', 'optimum lot size', 'capacity of a warehouse', 'lot size corresponding to break-even analysis', 'optimum lot size'),
+(49, 'Production cost refers to prime cost plus', 'factory overheads', 'factory and administration overheads', 'factory, administration and sales overheads', 'factory, administration, sales overheads and profit', 'factory overheads'),
+(50, 'A systematic job improvement sequence will consist of', 'motion study', 'time study', 'job enrichment', 'all of these', 'all of these'),
+(51, 'Military type of organisation is known as', 'line organisation', 'functional organisation', 'line and staff organisation', 'line, staff and functional organisation', 'line organisation');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
